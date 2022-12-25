@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="com.koreait.app.member.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.koreait.app.file.vo.FileVO" alias="fileVO"/>
+		<typeAlias type="com.koreait.app.board.vo.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.koreait.app.reply.vo.ReplyVO" alias="replyVO"/>
+		<typeAlias type="com.koreait.app.board.vo.BoardDTO" alias="boardDTO"/>
+		<typeAlias type="com.koreait.app.reply.vo.ReplyDTO" alias="replyDTO"/>
+	</typeAliases>
+
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/board"/>
+				<property name="username" value="root"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/koreait/mybatis/mapper/MemberMapper.xml"/>
+		<mapper resource="com/koreait/mybatis/mapper/BoardMapper.xml"/>
+		<mapper resource="com/koreait/mybatis/mapper/FileMapper.xml"/>
+		<mapper resource="com/koreait/mybatis/mapper/ReplyMapper.xml"/>
+	</mappers>
+	
+</configuration>

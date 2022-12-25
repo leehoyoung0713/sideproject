@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>board</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+     <servlet-name>MemberFrontController</servlet-name>
+     <servlet-class>com.koreait.app.member.MemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>MemberFrontController</servlet-name>
+     <url-pattern>*.me</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>BoardFrontController</servlet-name>
+     <servlet-class>com.koreait.app.board.BoardFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>BoardFrontController</servlet-name>
+     <url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>FileFrontController</servlet-name>
+     <servlet-class>com.koreait.app.file.FileFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>FileFrontController</servlet-name>
+     <url-pattern>*.fi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ReplyFrontController</servlet-name>
+  	<servlet-class>com.koreait.app.reply.ReplyFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ReplyFrontController</servlet-name>
+  	<url-pattern>*.re</url-pattern>
+  </servlet-mapping>
+</web-app>
