@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.mapper.BoardMapper">
+
+    <sql id="search">
+        <if test="keyword != null">
+            <trim prefix="(" suffix=")" prefixOverrides="OR">
+                <foreach item="type" collection="types">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type == 't'.toString()">
+                                BOARD_TITLE LIKE '%' || #{keyword} || '%'
+                            </when>
+                            <when test="type == 'c'.toString()">
+                                BOARD_CONTENT LIKE '%' || #{keyword} || '%'
+                            </when>
+                            <when test="type == 'w'.toString()">
+                                BOARD_WRITER LIKE '%' || #{keyword} || '%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
+    </sql>
+
+    <select id="getList" resultType="boardVO">
+        SELECT BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE
+        FROM
+        (
+            SELECT ROWNUM R, BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE
+            FROM
+            (
+                SELECT BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE
+                FROM TBL_BOARD
+                ORDER BY BOARD_NUMBER DESC
+            )
+            WHERE
+            <trim prefixOverrides="AND">
+                <include refid="search"/>
+                <![CDATA[
+                AND ROWNUM <= #{page} * #{amount}
+                ]]>
+            </trim>
+        )
+        <![CDATA[
+        WHERE R > (#{page} - 1) * #{amount}
+        ]]>
+    </select>
+
+    <insert id="insert">
+        <selectKey keyProperty="boardNumber" order="BEFORE" resultType="long">
+            SELECT SEQ_BOARD.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_BOARD (BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT)
+        VALUES(#{boardNumber}, #{boardTitle}, #{boardWriter}, #{boardContent})
+    </insert>
+
+    <update id="update">
+        UPDATE TBL_BOARD
+        SET BOARD_TITLE = #{boardTitle}, BOARD_CONTENT = #{boardContent}, BOARD_UPDATE_DATE = SYSDATE
+        WHERE BOARD_NUMBER = #{boardNumber}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM TBL_BOARD
+        WHERE BOARD_NUMBER = #{boardNumber}
+    </delete>
+
+    <select id="select" resultType="boardVO">
+        SELECT BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE
+        FROM TBL_BOARD WHERE BOARD_NUMBER = #{boardNumber}
+    </select>
+
+    <select id="selectCountOfBoard" resultType="_int">
+        SELECT COUNT(BOARD_NUMBER) FROM TBL_BOARD
+        <where>
+            <include refid="search"/>
+        </where>
+    </select>
+</mapper>

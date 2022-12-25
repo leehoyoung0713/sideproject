@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+    <style>
+        @media (max-width: 918px){
+            .writer {display: none;}
+            .regDate	 {display: none;}
+            .updateDate {display: none;}
+            div#searchWrap { display: block; text-align: center; }
+            select{width: 100%;}
+            a.search{ width: 100%;}
+        }
+        div#searchWrap { display: flex; text-align: center; }
+        form[name='searchForm'] {overflow: hidden;}
+        select{width: 30%;}
+    </style>
+</head>
+<body class="is-preload">
+<!-- Main -->
+<div id="main">
+    <div class="wrapper">
+        <div class="inner">
+            <!-- Elements -->
+            <header class="major">
+                <h1>Board</h1>
+                <p>게시판 목록</p>
+            </header>
+            <!-- Table -->
+            <h3><a class="write button small">글 등록</a></h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr class="tHead">
+                        <th class="bno">번호</th>
+                        <th class="title">제목</th>
+                        <th class="writer">작성자</th>
+                        <th class="regDate">작성일</th>
+                        <th class="updateDate">수정일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <th:block th:each="board:${boards}">
+                        <tr class="tBody" th:object="${board}">
+                            <td class="bno" th:text="*{boardNumber}"></td>
+                            <td class="title"><a class="read" th:text="*{boardTitle}" th:href="*{boardNumber}"></a></td>
+                            <td class="writer" th:text="*{boardWriter}"></td>
+                            <td class="regDate" th:text="*{boardRegisterDate}"></td>
+                            <td class="updateDate" th:text="*{boardUpdateDate}"></td>
+                        </tr>
+                    </th:block>
+                    </tbody>
+                </table>
+                <form th:action="@{/board/list}" name="searchForm" th:object="${criteria}">
+                    <div class="fields">
+                        <div class="field">
+                            <div id="searchWrap">
+                                <select name="type">
+                                    <option value="">검색 기준</option>
+                                    <option value="tcw" th:selected="*{type} == 'tcw'">전체</option>
+                                    <option value="t" th:selected="*{type} == 't'">제목</option>
+                                    <option value="c" th:selected="*{type} == 'c'">내용</option>
+                                    <option value="w" th:selected="*{type} == 'w'">작성자</option>
+                                    <option value="tc" th:selected="*{type} == 'tc'">제목 또는 내용</option>
+                                    <option value="tw" th:selected="*{type} == 'tw'">제목 또는 작성자</option>
+                                    <option value="cw" th:selected="*{type} == 'cw'">내용 또는 작성자</option>
+                                </select>
+                                <input type="text" th:field="*{keyword}" th:value="*{keyword}">
+                                <a href="" class="search button primary icon solid fa-search">검색</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div th:object="${pagination}">
+                    <div style="text-align: center">
+                        <a class="changePage" th:href="*{startPage - 1}" th:if="*{prev}"><code><</code></a>
+                        <th:block th:each="page:${#numbers.sequence(pagination.startPage, pagination.endPage)}">
+                            <a class="changePage" th:href="${page}" th:if="${pagination.criteria.page != page}"><code th:text="${page}"></code></a>
+                            <code th:unless="${pagination.criteria.page != page}" th:text="${page}"></code>
+                        </th:block>
+                        <a class="changePage" th:href="*{endPage + 1}" th:if="*{next}"><code>></code></a>
+                    </div>
+                    <form th:action="@{/board/list}" th:object="${criteria}" name="pageForm">
+                        <input type="hidden" th:field="*{page}">
+                        <input type="hidden" th:field="*{amount}">
+                        <input type="hidden" th:field="*{type}">
+                        <input type="hidden" th:field="*{keyword}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.dropotron.min.js"></script>
+<script src="/js/browser.min.js"></script>
+<script src="/js/breakpoints.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script th:inline="javascript">
+
+    let boardNumber = [[${boardNumber}]];
+    let queryString = [[${pagination.criteria.queryString}]];
+
+    const $pages = $("a.changePage");
+    const $read = $("a.read");
+
+    $("a.search").on("click", function(e){
+        e.preventDefault();
+        document.searchForm.submit();
+    });
+
+    $(document).ready(function(){
+        if(boardNumber == '' || history.state){
+            return;
+        }
+
+        if(parseInt(boardNumber) > 0){
+            alert("게시글 " + parseInt(boardNumber) + "번이 등록되었습니다.");
+        }
+        history.replaceState({}, null, null);
+    });
+
+    $pages.on("click", function(e){
+        e.preventDefault();
+        $(document.pageForm.page).val($(this).attr("href"));
+        document.pageForm.submit();
+    });
+
+    $read.on("click", function(e){
+        e.preventDefault();
+        location.href = "/board/read" + queryString + "&boardNumber=" + $(this).attr("href");
+    });
+
+    $("a.write").on("click", function(e){
+        e.preventDefault();
+        location.href = "/board/write" + queryString;
+    });
+</script>
+</body>
+</html>

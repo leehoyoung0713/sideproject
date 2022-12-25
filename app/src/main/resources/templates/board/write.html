@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+        .uploadResult ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .uploadResult ul li {
+            position: relative;
+        }
+
+        .uploadResult ul li span {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: -25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="is-preload">
+<!-- Main -->
+<div id="main">
+    <div class="wrapper">
+        <div class="inner">
+            <!-- Elements -->
+            <header class="major">
+                <h1>Board</h1>
+                <p>게시글 등록</p>
+            </header>
+            <!-- Table -->
+            <h3><a class="list button small">목록 보기</a></h3>
+            <div class="content">
+                <div class="form">
+                    <form method="post" th:action="@{/board/write}" id="writeForm" th:object="${board}" enctype="multipart/form-data">
+                        <div class="fields">
+                            <div class="field">
+                                <h4>제목</h4>
+                                <input th:field="*{boardTitle}" placeholder="Title" type="text" />
+                            </div>
+                            <div class="field">
+                                <h4>내용</h4>
+                                <textarea th:field="*{boardContent}" rows="6" placeholder="Content" style="resize:none"></textarea>
+                            </div>
+                            <div class="field">
+                                <h4>작성자</h4>
+                                <input th:field="*{boardWriter}" placeholder="Writer" type="text" />
+                            </div>
+                            <div class="field">
+                                <h4>첨부파일</h4>
+                                <input type="file" name="upload" multiple>
+                            </div>
+                            <div class="field">
+                                <div class="uploadResult">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="actions special">
+                            <li><input type="submit" class="button" value="등록" /></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.dropotron.min.js"></script>
+<script src="/js/browser.min.js"></script>
+<script src="/js/breakpoints.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script th:inline="javascript">
+    let queryString = [[${criteria.queryString}]];
+    let arrayFile = [];
+
+    $("a.list").on("click", function(e){
+        e.preventDefault();
+        location.href = "/board/list" + queryString;
+    });
+
+    $("input[type='file']").on("change", function(){
+        let formData = new FormData();
+        let $inputFile = $("input[name='upload']");
+        let files = $inputFile[0].files;
+
+        console.log(Array.from(files));
+
+        Array.from(files).forEach(file => arrayFile.push(file));
+        const dataTransfer = new DataTransfer();
+        arrayFile.forEach(file => dataTransfer.items.add(file));
+        $(this)[0].files = dataTransfer.files;
+
+        console.log($(this)[0].files);
+
+        $(files).each(function(i, file){
+            formData.append("upload", file);
+        });
+
+        $.ajax({
+            url: "/file/upload",
+            type: "post",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: showUploadResult
+        });
+    });
+
+    function showUploadResult(files){
+        let text = "";
+        $(files).each(function(i, file){
+            text += `<li data-file-size="` + file.fileSize + `" data-file-name="` + file.fileName + `" data-file-upload-path="` + file.fileUploadPath + `" data-file-uuid="` + file.fileUuid + `" data-file-image-check="` + file.fileImageCheck + `">`;
+            text += `<span>X</span>`;
+            if(!file.fileImageCheck){
+                text += `<img src="/images/attach.png" width="100">`;
+            }else{
+                text += `<img src="/file/display?fileName=` + file.fileUploadPath + `/s_` + file.fileUuid + "_" + file.fileName + `">`;
+            }
+            text += `<p>` + file.fileName +`(` + parseInt(file.fileSize / 1024) + `KB)</p>`
+            text += `</li>`;
+        });
+        $(".uploadResult ul").append(text);
+    }
+
+    $(".uploadResult ul").on("click", "span", function(){
+        const $li = $(this).closest("li");
+        let i = $(".uploadResult ul span").index($(this));
+        let uploadPath = $li.data("file-upload-path");
+        let fileName = $li.data("file-uuid") + "_" + $li.data("file-name");
+        $.ajax({
+            url: "/file/delete",
+            type: "post",
+            data: {uploadPath: uploadPath, fileName: fileName, fileImageCheck: $li.data("file-image-check")},
+            success: function(){
+                $li.remove();
+                arrayFile.splice(i, 1);
+                const dataTransfer = new DataTransfer();
+                arrayFile.forEach(file => dataTransfer.items.add(file));
+                $("input[name='upload']")[0].files = dataTransfer.files;
+            }
+        });
+    });
+
+    $("input[type='submit']").on("click", function(e){
+        e.preventDefault();
+        let text = "";
+        $.each($(".uploadResult ul li"), function(i, li){
+            let fileName = $(li).data("file-name");
+            let fileUploadPath = $(li).data("file-upload-path");
+            let fileUuid = $(li).data("file-uuid");
+            let fileSize = $(li).data("file-size");
+            let fileImageCheck = $(li).data("file-image-check");
+            text += `<input type="hidden" name="files[` + i + `].fileName" value="` + fileName + `">`;
+            text += `<input type="hidden" name="files[` + i + `].fileUploadPath" value="` + fileUploadPath + `">`;
+            text += `<input type="hidden" name="files[` + i + `].fileUuid" value="` + fileUuid + `">`;
+            text += `<input type="hidden" name="files[` + i + `].fileSize" value="` + fileSize + `">`;
+            text += `<input type="hidden" name="files[` + i + `].fileImageCheck" value="` + fileImageCheck + `">`;
+        });
+        $("form#writeForm").append(text).submit();
+    });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
