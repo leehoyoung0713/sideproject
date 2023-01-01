@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapping되는 sql구문을 위한 태그이며, mapping되는 namespace는 유일해야하기 때문에 Reply테이블명 사용 -->
 <mapper namespace="Reply">
+
+	<!-- 메서드 이름이 selectAll이며, 매개변수로 int 타입의 객체를 받고, 반환타입이 replyDTO 타입인 select쿼리문과 매핑 -->
 	<select id="selectAll" parameterType="_int" resultType="replyDTO">
 		select reply_number, reply_content, reply_date, m.member_number, board_number, member_id 
 		from tbl_member m join tbl_reply r
@@ -8,15 +12,18 @@
 		order by reply_date desc
 	</select>
 	
+	<!-- 메서드 이름이 insert이며, 매개변수로 replyVO 타입의 객체를 받는 insert쿼리문과 매핑 -->
 	<insert id="insert" parameterType="replyVO">
 		insert into tbl_reply (reply_content, member_number, board_number)
 		values (#{replyContent}, #{memberNumber}, #{boardNumber})
 	</insert>
 	
+	<!-- 메서드 이름이 delete이며, 매개변수로 int 타입의 객체를 받는 delete쿼리문과 매핑 -->
 	<delete id="delete" parameterType="_int">
 		delete from tbl_reply where reply_number = #{replyNumber}
 	</delete>
 	
+	<!-- 메서드 이름이 update이며, 매개변수로 replyVO 타입의 객체를 받는 update쿼리문과 매핑 -->
 	<update id="update" parameterType="replyVO">
 		update tbl_reply
 		set reply_content = #{replyContent}

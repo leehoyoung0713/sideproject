@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapping되는 sql구문을 위한 태그이며, mapping되는 namespace는 유일해야하기 때문에 File테이블명 사용 -->
 <mapper namespace="File">
+
+   <!-- 메서드 이름이 insert이며, 매개변수로 fileVO 타입의 객체를 받는 insert쿼리문과 매핑 -->
    <insert id="insert" parameterType="fileVO">
       insert into tbl_file values(#{fileSystemName}, #{fileOriginalName}, #{boardNumber})
    </insert>
    
+   <!-- 메서드 이름이 select이며, 매개변수로 int타입을 받고, 반환타입이 fileVO인 select쿼리문과 매핑 -->
    <select id="select" parameterType="int" resultType="fileVO">
    		select file_system_name, file_original_name from tbl_file where board_number=#{boardNumber}
    </select>
-   
    
 </mapper>

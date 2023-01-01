@@ -14,15 +14,23 @@ import com.koreait.app.Result;
 import com.koreait.app.member.dao.MemberDAO;
 import com.koreait.app.member.vo.MemberVO;
 
+//Execute 인터페이스를 구현하는 LoginOkController클래스 선언
 public class LoginOkController implements Execute {
+	
+//	execute메서드 재정의
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+//		데이터베이스의 data에 접근하기 위한 dao객체 및 vo객체 생성
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
+		
+//		페이지 이동을 위한 Result객체, session에 값 저장을 위해 session객체 생성
 		Result result = new Result();
 		HttpSession session = req.getSession();
 		int memberNumber = 0;
 		
+//		로그인 페이지에서 입력받은 아이디와 패스워드를 파라미터의 키값으로 받아서 저장
 		String memberId = req.getParameter("memberId");
 		String memberPw = req.getParameter("memberPw");
 		
@@ -71,7 +79,11 @@ public class LoginOkController implements Execute {
 			if(saveId) {
 //				쿠키에 사용자 아이디를 저장해준다.
 				Cookie cookieMemberId = new Cookie("memberId", memberId);
+				
+//				1년의 기간을 설정			
 				cookieMemberId.setMaxAge(60*60*24*365);
+				
+//				쿠키 객체를 웹 브라우저로 보낸다.
 				resp.addCookie(cookieMemberId);
 				
 			}else {
@@ -94,9 +106,11 @@ public class LoginOkController implements Execute {
 				Cookie cookieMemberId = new Cookie("memberId", memberId);
 				Cookie cookieMemberPw = new Cookie("memberPw", memberPw);
 				
+//				1년의 기간을 설정	
 				cookieMemberId.setMaxAge(60*60*24*365);
 				cookieMemberPw.setMaxAge(60*60*24*365);
 				
+//				쿠키 객체를 웹 브라우저로 보낸다.
 				resp.addCookie(cookieMemberId);
 				resp.addCookie(cookieMemberPw);
 				
@@ -104,6 +118,8 @@ public class LoginOkController implements Execute {
 				if(req.getHeader("Cookie") != null) {
 					for(Cookie cookie : req.getCookies()) {
 						if(cookie.getName().equals("memberId") || cookie.getName().equals("memberPw")) {
+							
+//							기간을 0으로 설정해서 만료되게 하며, 쿠키 객체를 웹 브라우저로 보낸다.
 							cookie.setMaxAge(0);
 							resp.addCookie(cookie);
 						}
@@ -111,6 +127,7 @@ public class LoginOkController implements Execute {
 				}
 			}
 			
+//			페이지 이동이므로 true로 설정, url을 "/board/listOk.bo"로 이동
 			result.setRedirect(true);
 			result.setPath(req.getContextPath() + "/board/listOk.bo");
 			
@@ -123,6 +140,7 @@ public class LoginOkController implements Execute {
 			result.setPath("/member/login.me?login=false");
 		}
 		 
+//		Result객체 반환
 		return result;
 	}
 }

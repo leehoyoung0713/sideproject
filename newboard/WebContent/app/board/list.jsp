@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<!-- taglib지시자로 라이브러리 선언 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE HTML>
@@ -13,6 +15,9 @@
 		<title>게시글 목록</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- ${pageContext.request.contextPath} - project의 WebContent까지의 경로(상대경로) -->
+      	<!-- http://localhost:8085/assets/css/main.css -->
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main.css" />
 		<style>
 			table tbody tr{
@@ -27,6 +32,8 @@
 				<!-- Wrapper -->
 					<div class="wrapper">
 						<div class="inner">
+						
+							<!-- html코드만을 include하여 header파일 추가 -->
 							<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp"/>
 						</div>
 					</div>
@@ -37,6 +44,8 @@
 
 							<!-- Main -->
 								<section class="main">
+								
+									<!-- http://localhost:8085/images/boardMain.png -->
 									<a href="#" class="image main"><img src="${pageContext.request.contextPath}/images/boardMain.png" alt="" /></a>
 									<header class="major">
 										<h1>게시판</h1>
@@ -45,6 +54,8 @@
 
 									<div class="table-wrapper">
 										<div style="display:flex; justify-content:space-between;">
+										
+											<!-- 게시글의 총 개수 표시 -->
 											<span>글 개수 : <c:out value="${total}"/>개</span>
 											<button style="border-radius:0;" onclick="location.href = '${pageContext.request.contextPath}/board/write.bo'">글 쓰기</button>
 										</div>
@@ -60,14 +71,27 @@
 												</tr>
 											</thead>
 											<tbody>
+												<!-- 게시글이 있으면서 1개 이상일때 -->
 												<c:choose>
+												
 													<c:when test="${boards != null and fn:length(boards) > 0}">
+														<!-- controller를 통해 조회해온 board데이터들을 jstl태그의 반복문을 통해 표시 -->
 														<c:forEach var="board" items="${boards}">
 															<tr>
+															
+																<!-- 게시글 번호 표시 -->
 																<td><c:out value="${board.getBoardNumber()}"/></td>
+																
+																<!-- 게시글 제목 표시, 클릭시 상세 페이지로 이동 -->
 																<td><a href='${pageContext.request.contextPath}/board/detailOk.bo?boardNumber=${board.getBoardNumber()}'><c:out value="${board.getBoardTitle()}"/></a></td>
+																
+																<!-- 게시글 작성자 표시 -->
 																<td><c:out value="${board.getMemberId()}"/></td>
+																
+																<!-- 게시글 작성일자 표시 -->
 																<td><c:out value="${board.getBoardDate()}"/></td>
+																
+																<!-- 게시글 조회수 표시 -->
 																<td><c:out value="${board.getBoardReadCount()}"/></td>
 															</tr>
 														</c:forEach>
@@ -85,22 +109,39 @@
 										<table style="font-size:1.3rem">
 											<tr align="center" valign="middle">
 												<td class="web-view">
+												
+													<!-- 이전 버튼 표시 flag가 true인경우 표시 -->
 													<c:if test="${prev}">
+													
+														<!-- 클릭시 이전 페이지로 이동 -->
 														<a href="${pageContext.request.contextPath}/board/listOk.bo?page=${startPage - 1}">&lt;</a>
 													</c:if>
+													
+													<!-- jstl의 반복문을 통해 시작 페이지 부터 끝 페이지까지 반복 -->
 													<c:forEach var="i" begin="${startPage}" end="${endPage}">
+													
+														<!-- 현재 위치한 페이지와 같지 않다면 -->
 														<c:choose>
 															<c:when test="${not (i eq page)}">
+															
+																<!-- 다른 페이지에 해당하는 게시글 목록 페이지로 이동 -->
 																<a href="${pageContext.request.contextPath}/board/listOk.bo?page=${i}">
+																
+																	<!-- 다른 페이지 표시 -->
 																	<c:out value="${i}"/>&nbsp;&nbsp;
 																</a>
 															</c:when>
 															<c:otherwise>
+																	<!-- 현재 페이지의 이동이 없는 숫자만 표시 -->
 																	<c:out value="${i}"/>&nbsp;&nbsp;
 															</c:otherwise>
 														</c:choose>
 													</c:forEach>
+													
+													<!-- 다음 버튼 표시 flag가 true인경우 표시 -->
 													<c:if test="${next}">
+													
+														<!-- 클릭시 다음 페이지로 이동 -->
 														<a href="${pageContext.request.contextPath}/board/listOk.bo?page=${endPage + 1}">&gt;</a>
 													</c:if>
 												</td>
@@ -169,6 +210,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<!-- 홈페이지의 기능을 위한 설정 -->
 			<script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
 			<script src="${pageContext.request.contextPath}/assets/js/browser.min.js"></script>
 			<script src="${pageContext.request.contextPath}/assets/js/breakpoints.min.js"></script>

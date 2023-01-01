@@ -1,6 +1,9 @@
 package com.koreait.app.board.vo;
 
+//게시글 작성시 화면에서 입력받을 데이터를 저장하기 위한 BoardVO클래스 선언
 public class BoardVO {
+	
+//	멤버 변수 선언
 	private int boardNumber;
 	private String boardTitle;
 	private String boardContent;
@@ -8,8 +11,10 @@ public class BoardVO {
 	private int boardReadCount;
 	private int memberNumber;
 	
+//	기본 생성자 선언
 	public BoardVO() {;}
 
+//	getter, setter메서드 선언
 	public int getBoardNumber() {
 		return boardNumber;
 	}
@@ -58,6 +63,7 @@ public class BoardVO {
 		this.memberNumber = memberNumber;
 	}
 
+//	toString메서드 재정의
 	@Override
 	public String toString() {
 		return "BoardVO [boardNumber=" + boardNumber + ", boradTitle=" + boardTitle + ", boardContent=" + boardContent

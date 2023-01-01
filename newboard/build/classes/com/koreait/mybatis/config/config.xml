@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
 
+<!-- mybatis 설정을 위한 태그 -->
 <configuration>
+
+<!-- 환경 설정들을 위한 태그 -->
 	<settings>
+	
+	<!-- 'user_name'부분을 'userName'으로 변환시켜주는 설정 추가 -->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	
+	<!-- VO및 DTO객체를 alias를 통해 짧게 사용하기 위한 별칭 설정 -->
 	<typeAliases>
 		<typeAlias type="com.koreait.app.member.vo.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.koreait.app.file.vo.FileVO" alias="fileVO"/>
@@ -15,10 +21,19 @@
 		<typeAlias type="com.koreait.app.reply.vo.ReplyDTO" alias="replyDTO"/>
 	</typeAliases>
 
+	<!-- 사용할 데이터베이스 설정(기본값) -->
 	<environments default="mysql">
+	
+		<!-- 사용할 데이터베이스 목록중 mysql 설정  -->
 		<environment id="mysql">
+		
+			<!-- JDBC 커밋과 롤백을 처리하기 위한 태그 -->
 			<transactionManager type="JDBC"/>
+			
+			<!-- 트랜잭션 스코프 관리를 위한 태그 -->
 			<dataSource type="POOLED">
+			
+				<!-- mybatis 연결을 위한 드라이버,url 및 계정정보 입력 -->
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
 				<property name="url" value="jdbc:mysql://localhost:3306/board"/>
 				<property name="username" value="root"/>
@@ -27,6 +42,7 @@
 		</environment>
 	</environments>
 	
+<!-- DAO의 메서드와 xml의 작성된 쿼리문을 mapping해주기 위한 태그 -->
 	<mappers>
 		<mapper resource="com/koreait/mybatis/mapper/MemberMapper.xml"/>
 		<mapper resource="com/koreait/mybatis/mapper/BoardMapper.xml"/>

@@ -12,9 +12,14 @@ import javax.servlet.http.HttpSession;
 import com.koreait.app.Execute;
 import com.koreait.app.Result;
 
+//Execute 인터페이스를 구현하는 LoginController클래스 선언
 public class LoginController implements Execute{
+	
+//	execute메서드 재정의
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+//		페이지 이동을 위한 Result객체, 로그인시 session에 값을 저장하기 위한 session객체 생성
 		Result result = new Result();
 		HttpSession session = req.getSession();
 		String memberId = null, memberPw = null;
@@ -26,6 +31,7 @@ public class LoginController implements Execute{
 //		하지만 null이 아니라면(세션에 logout이 있다면) 로그아웃을 누르고 로그인 페이지를 요청했다는 뜻이기 때문에 해당 값(true)을 logout에 담아준다.
 		boolean logout = sessionValue != null ? Boolean.valueOf(sessionValue) : false;
 		
+//		
 		if(temp != null) { // 로그아웃을 눌러서 로그인 페이지로 왔을 때
 			logout = Boolean.valueOf(temp); // logout에 true를 담아준다.
 			session.setAttribute("logout", logout); // 로그인 페이지를 벗어나더라도 다시 로그인 페이지를 요청했을 때 로그아웃 상태를 저장시켜야 한다.
@@ -63,9 +69,12 @@ public class LoginController implements Execute{
 //				화면에 원본 비밀번호를 전달하여 비밀번호를 미리 작성시켜 놓는다.
 				req.setAttribute("memberPw", new String(Base64.getDecoder().decode(memberPw.getBytes())));
 			}
+			
+//			redirect url을 "/app/member/login.jsp"을 설정
 			result.setPath("/app/member/login.jsp");
 		}
 		
+//		Result객체를 반환
 		return result;
 	}
 }

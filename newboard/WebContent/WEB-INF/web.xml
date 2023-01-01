@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+<!-- 파일의 타이틀이며 프로젝트 명으로 설정한다. -->
   <display-name>board</display-name>
+  
+  <!-- 서버의 루트 경로로 이동시 띄워줄 페이지 목록 -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -10,43 +14,83 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 수행할 서블릿 클래스를 설정하는 태그 -->
   <servlet>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>MemberFrontController</servlet-name>
+     
+     <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 실행되는 서블릿 클래스를 지정하는 태그 -->
      <servlet-class>com.koreait.app.member.MemberFrontController</servlet-class>
   </servlet>
   
+  <!-- 브라우저에서 요청하는 논리적 서블릿을 설정 -->
   <servlet-mapping>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>MemberFrontController</servlet-name>
+     
+     <!-- 클라이언트가 요청하는 논리적 서블릿 이름(현재 디렉터리를 최상위 디렉터리로 인식) -->
      <url-pattern>*.me</url-pattern>
   </servlet-mapping>
   
+  <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 수행되는 서블릿 클래스 설정하는 태그 -->
   <servlet>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>BoardFrontController</servlet-name>
+     
+     <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 실행되는 서블릿 클래스 지정 -->
      <servlet-class>com.koreait.app.board.BoardFrontController</servlet-class>
   </servlet>
   
+  <!-- 브라우저에서 요청하는 논리적 서블릿을 설정 -->
   <servlet-mapping>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>BoardFrontController</servlet-name>
+     
+     <!-- 클라이언트에서 요청하는 논리적 서블릿 이름(현재 디렉터리를 최상위 디렉터리로 인식) -->
      <url-pattern>*.bo</url-pattern>
   </servlet-mapping>
   
+  <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 수행할 서블릿 클래스를 설정하는 태그 -->
   <servlet>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>FileFrontController</servlet-name>
+     
+     <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 실행되는 서블릿 클래스 지정 -->
      <servlet-class>com.koreait.app.file.FileFrontController</servlet-class>
   </servlet>
   
+  <!-- 브라우저에서 요청하는 논리적 서블릿을 설정 -->
   <servlet-mapping>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
      <servlet-name>FileFrontController</servlet-name>
+     
+     <!-- 클라이언트가 요청하는 논리적 서블릿 이름(현재 디렉터리를 최상위 디렉터리로 인식) -->
      <url-pattern>*.fi</url-pattern>
   </servlet-mapping>
   
+  <!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 수행하는 서블릿 클래스를 설정하는 태그 -->
   <servlet>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
   	<servlet-name>ReplyFrontController</servlet-name>
+  	
+  	<!-- 브라우저에서 요청하는 매핑 이름에 대해 실제 실행되는 서블릿 클래스 지정 -->
   	<servlet-class>com.koreait.app.reply.ReplyFrontController</servlet-class>
   </servlet>
   
+  <!-- 브라우저에서 요청하는 논리적인 서블릿을 설정 -->
   <servlet-mapping>
+  
+  <!-- <servlet>과 <servlet-mapping>을 연결시켜주는 태그 -->
   	<servlet-name>ReplyFrontController</servlet-name>
+  	
+  	<!-- 클라이언트가 요청하는 논리적인 서블릿 이름(현재 디렉터리를 최상위 디렉터리로 인식) -->
   	<url-pattern>*.re</url-pattern>
   </servlet-mapping>
 </web-app>

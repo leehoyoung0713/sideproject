@@ -1,6 +1,9 @@
 package com.koreait.app.member.vo;
 
+// 화면에서 회원의 정보를 입력받아 데이터를 저장하기 위한 MemberVO클래스 선언
 public class MemberVO {
+	
+//	멤버변수 선언
    private int memberNumber;
    private String memberId;
    private String memberPw;
@@ -12,8 +15,10 @@ public class MemberVO {
    private String memberAddress;
    private String memberAddressDetail;
    
+//   기본 생성자 선언
    public MemberVO() {;}
 
+//   getter, setter 메서드 선언
    public int getMemberNumber() {
       return memberNumber;
    }
@@ -94,6 +99,7 @@ public class MemberVO {
       this.memberAddressDetail = memberAddressDetail;
    }
 
+//   toString메서드 재정의
    @Override
    public String toString() {
       return "MemberVO [memberNumber=" + memberNumber + ", memberId=" + memberId + ", memberPw=" + memberPw
