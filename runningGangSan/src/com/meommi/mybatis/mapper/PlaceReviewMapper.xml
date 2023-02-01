@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="PlaceReview">
+	<!-- 게시글 클릭 시 모든 후기 나오게 하기 -->
+	<select id="selectAll" parameterType="string" resultType="placeReviewDTO">
+		select place_review_number, place_review_contents, place_review_rating, place_review_dateTime, t.user_number, u.user_name, place_review_helful
+		from tbl_place_review t inner join tbl_user u 
+		on t.user_number = u.user_number
+		where place_id = #{placeId} order by place_review_helful desc;
+	</select>
+	
+	<select id="selectFile" parameterType="_int" resultType="string">
+		select review_file_system_name from tbl_review_file where place_review_number = #{placeReviewNumber}
+	</select>
+
+	<insert id="insertContent" parameterType = "placeReviewDTO">
+		INSERT INTO meommi.tbl_place_review
+		(place_review_contents, place_review_rating, user_number, place_id, place_name, place_address, user_name, place_review_helful)
+		VALUES(#{placeReviewContents}, #{placeReviewRating}, #{userNumber}, #{placeId}, #{placeName}, #{placeAddress}, #{userName}, #{placeReviewHelful})
+    </insert>
+    
+   <update id="updateHelpfulNumberUp" parameterType = "placeReviewVO">  <!-- 도움이 돼요 개수 증가-->
+        update tbl_place_review
+        set place_review_helful =place_review_helful+1
+        where place_review_number = #{placeReviewNumber}
+   </update>
+   
+    <update id="updateHelpfulNumberDown" parameterType = "placeReviewVO">  <!-- 도움이 돼요 개수 감소-->
+        update tbl_place_review
+        set place_review_helful =place_review_helful-1
+        where place_review_number = #{placeReviewNumber}
+   </update>
+    
+   <select id="selectCurrentSequence" resultType="_int">
+      select place_review_number from tbl_place_review order by place_review_number desc limit 0,1
+   </select>
+   
+   <!-- 리뷰 삭제하기 -->
+	<select id="delete" parameterType ="_int">
+		delete from tbl_place_review where place_review_number=#{placeReviewNumber}
+	</select>
+	
+	<!-- 리뷰 수정하기 -->
+	<update id="update" parameterType="placeReviewVO">
+		update tbl_place_review
+		set place_review_contents=#{placeReviewContents}
+		where place_review_number = #{placeReviewNumber}
+	</update>
+		
+	<!-- 페이징처리 -->
+	<select id="pagingCount" parameterType="string" resultType="_int">
+		select count(place_review_number) from tbl_place_review
+		where place_id=#{placeId}
+	</select>
+	
+	<!-- 도움이 돼요 버튼 클릭 시 해당 게시글 좋아요 누른 것 저장 -->
+	<insert id="addHelp" parameterType="map">
+		insert into tbl_helful
+		(user_number, place_review_number) 
+		values(#{userNumber}, #{placeReviewNumber})
+	</insert>
+	
+	<!-- 다시 누르면 삭제 -->
+	<delete id="deleteHelp" parameterType="map">
+		delete from tbl_helful
+		where user_number=#{userNumber} and place_review_number=#{placeReviewNumber}
+	</delete>
+	
+	<!-- 좋아요 개수 세기 -->
+	<select id="helpCount" parameterType="_int" resultType="_int">
+		select count(user_number) from tbl_helful where place_review_number = #{placeReviewNumber}
+	</select>
+	
+	<!-- 각 게시글마다 도움이 돼요 눌렀는지 확인 -->
+	<select id="isHelp" parameterType="map" resultType="_int">
+		select count(user_number)
+		from tbl_helful
+		where user_number=#{userNumber} and place_review_number = #{placeReviewNumber}
+	</select>
+	
+			
+    <select id="noPhotoFilter" parameterType="criteria" resultType="placeReviewDTO">
+      select r.place_review_number, place_review_helful, place_review_contents, place_review_rating, place_review_dateTime, r.user_number, u.user_name
+      from tbl_place_review r, tbl_user u
+      <where>
+          r.user_number = u.user_number
+      <trim prefix="AND">
+              r.user_number = u.user_number
+          <if test="star != 'none'.toString()">
+               and place_review_rating = #{star}
+          </if>
+          <if test="placeId != 'none'.toString()">
+              and place_id = #{placeId}
+          </if>
+      </trim>
+      </where>
+      <if test="order != 'none'.toString()">
+              <choose>
+                <when test="order == 'n'.toString()">
+                    order by place_review_datetime desc
+                </when>
+                <when test="order == 'b'.toString()">
+                     order by place_review_helful desc
+                </when>
+            </choose>
+      </if>
+    </select>
+    
+    
+    <select id="photoFilter" parameterType="criteria" resultType="placeReviewDTO">
+      select r.place_review_number, place_review_helful, place_review_contents, place_review_rating, place_review_dateTime, r.user_number, u.user_name
+      from tbl_review_file f, tbl_place_review r, tbl_user u
+      <where>
+          f.place_review_number = r.place_review_number
+        <trim prefix="AND">
+              r.user_number = u.user_number
+            and place_id = #{placeId}
+          <if test="star != 'none'.toString()">
+               and place_review_rating = #{star}
+          </if>
+          </trim>
+      </where>
+          <if test="order != 'none'.toString()">
+              <choose>
+                <when test="order == 'n'.toString()">
+                    order by place_review_datetime desc
+                </when>
+                <when test="order == 'b'.toString()">
+                     order by place_review_helful desc
+                </when>
+            </choose>
+          </if>   
+      </select>
+   
+</mapper>
+	

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Post">
+
+	<select id="selectPostDefault" resultType="postDTO">
+		select post_number,post_content,post_datetime,p.user_number,u.user_id from 
+		tbl_post p join tbl_user u on p.user_number=u.user_number order by post_datetime desc limit 0,5
+	</select>
+	<select id="selectPostRow" parameterType="map" resultType="postDTO">
+		select post_number,post_content,post_datetime,p.user_number,u.user_id from 
+		tbl_post p join tbl_user u on p.user_number=u.user_number order by post_datetime desc limit #{startIndex},1
+	</select>
+	
+	<insert id="insertContent" parameterType = "postVO">
+   insert into tbl_post 
+   (post_content, user_number)
+   values (#{postContent}, #{userNumber})
+   </insert>
+   
+   <select id="selectCurrentSequence" resultType="_int">
+      select last_insert_id()
+   </select>
+   
+   <update id="updatePost" parameterType="postDTO">
+		update tbl_post set post_content=#{postContent}, post_datetime=#{postDateTime} where post_number=#{postNumber}
+   </update>
+	
+	<delete id="deletePost" parameterType="_int">
+		delete from tbl_post where post_number=#{postNumber}
+	</delete>
+	
+	<!-- following쿼리문에서 재사용 -->
+	<select id="selectFollowerDefault" parameterType="_int" resultType="postDTO">
+		select post_number,post_content,post_datetime,p.user_number,u.user_id from 
+		tbl_post p join tbl_user u on p.user_number=u.user_number where p.user_number=#{userNumber} order by post_datetime desc limit 0,5;
+	</select>
+	
+</mapper>

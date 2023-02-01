@@ -1,0 +1,1630 @@
+@charset "UTF-8";
+
+@media (max-width:1890px){
+    .myLocationMap{
+        display:none;
+    }
+}
+
+@media (min-width:5px){
+    /* 전체 */
+    body {
+       
+        background-color: #fff;
+    }
+
+    .connect-mp-app {
+        display: none;
+    }
+
+    .connect-mp-app.map {
+        display: none;
+    }
+
+    .pg-search article.contents {
+        position: relative;
+        overflow: hidden;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .pg-search article.contents .black_screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        z-index: 100;
+        display: none;
+    }
+
+
+    /* 왼쪽 영역 */
+    .pg-search.reverse .column-wrapper {
+        width: 30%;
+        min-width: 490px;
+    }
+
+    .pg-search .column-wrapper {
+        width: calc(100% - 400px);
+    }
+
+    .pg-search.reverse .column-contents.flex-contents {
+        box-sizing: content-box;
+        padding: 0;
+    }
+
+    .pg-search.reverse .column-contents {
+        float: left;
+        min-width: 400px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .pg-search .column-contents.flex-contents {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 0 30px;
+    }
+
+    .pg-search .column-contents {
+        margin: 0 auto;
+        min-height: 1550px;
+        min-width: 800px;
+        width: 66.667%;
+        background-color: #fff;
+    }
+
+    .pg-search .column-contents {
+        position: relative;
+        height: 100%;
+    }
+
+    .pg-search.reverse .column-contents>.inner {
+        width: 400px;
+        box-sizing: border-box;
+        padding: 0 24px;
+    }
+
+    .pg-search .column-contents>.inner {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 800px;
+    }
+
+    .pg-search .module {
+        padding: 30px 0 0 0;
+    }
+
+    .pg-search .module {
+        position: relative;
+    }
+
+
+   /* 왼쪽 필터 */
+   .pg-search .search-results .search-options .btn.filter {
+        line-height: 24px;
+    }
+
+    .pg-search .search-results .search-options .btn:before {
+        content: '';
+        display: inline-block;
+        margin: -2px 7px 0 20px;
+        vertical-align: middle;
+    }
+
+    .pg-search .search-results .search-options .btn {
+        font-size: 1.1em;
+        color: #9b9b9b;
+    }
+
+    .RelatedContentSlider__Wrap--Loaded {
+        padding-bottom: 0;
+        height: 43.737vw;
+    }
+
+    .RelatedContentSlider__Wrap {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-bottom: 43.737%;
+        margin: 15px 0 -9px 0;
+    }
+
+    /* 왼쪽 하단부 */
+    .reverse .list-restaurants {
+        margin-top: 17px;
+    }
+
+    .list-restaurants {
+        margin-top: 20px;
+    }
+
+    .pg-search.reverse .column-contents>.inner .module .search-list-restaurants-inner-wrap .list-restaurants>li {
+        padding: 0;
+        border: 0;
+    }
+
+    .reverse .list-restaurants>li {
+        float: none;
+        padding: 15px 0 15px 0;
+        width: 100%;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .list-restaurants>li:nth-child(odd) {
+        padding-right: 17px;
+    }
+
+    .list-restaurants>li {
+        padding-bottom: 20px;
+    }
+
+    .pg-search.reverse .column-contents>.inner .module .search-list-restaurants-inner-wrap .list-restaurants>li .list-restaurant-item:nth-child(odd) {
+        padding-right: 0;
+    }
+
+    .pg-search.reverse .column-contents>.inner .module .search-list-restaurants-inner-wrap .list-restaurants>li .list-restaurant-item {
+        display: block;
+        width: 100%;
+        float: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .pg-search .search-results .search-list-restaurants-inner-wrap .list-restaurants>li>.list-restaurant-item:nth-child(odd) {
+        padding-right: 17px;
+    }
+
+    .pg-search .search-results .search-list-restaurants-inner-wrap .list-restaurants>li>.list-restaurant-item {
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .reverse .restaurant-item {
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 117px;
+        height: 105px;
+    }
+
+    .pg-search .search-results .search-list-restaurants-inner-wrap .list-restaurants>li a.only-desktop_not:nth-child(odd) {
+        padding-right: 0;
+    }
+
+    .reverse .restaurant-item a {
+        position: static !important;
+    }
+
+    .pg-search .search-results .search-list-restaurants-inner-wrap .list-restaurants>li .thumb {
+        width: 359px;
+        height: 239px;
+    }
+
+    .reverse .restaurant-item .thumb {
+        display: block;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 105px !important;
+        height: inherit !important;
+        position: relative;
+    }
+
+    .reverse .restaurant-item .thumb:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .restaurant-item .thumb:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 42.85714%;
+    }
+
+    
+
+    .reverse .restaurant-item .info {
+        padding: 0;
+        height: 105px;
+    }
+
+    .restaurant-item .info {
+        padding-top: 9px;
+        padding-bottom: 0;
+    }
+
+    .restaurant-item .info {
+        position: relative;
+        text-decoration: none;
+    }
+
+    .reverse .restaurant-item a {
+        position: static !important;
+    }
+
+    .reverse .restaurant-item .info .title {
+        font-size: 1.313rem;
+    }
+
+    .restaurant-item .info .title {
+        font-size: 1.3rem;
+    }
+
+    .restaurant-item .info .title {
+        display: inline-block;
+        overflow: hidden;
+        max-width: 64%;
+        font-size: 1.000rem;
+        color: #555;
+        line-height: 1.3em;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .reverse .restaurant-item .info .point {
+        position: static;
+        margin-left: 5px;
+        font-size: 1.313rem;
+    }
+
+    .restaurant-item .info .point {
+        margin-left: 5px;
+        font-size: 1.37rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .restaurant-item .info .point {
+        display: inline-block;
+        font-size: 1.375rem;
+        color: #FF914D;
+        vertical-align: middle;
+        line-height: 1em;
+    }
+
+    .reverse .restaurant-item .info .etc, .reverse .restaurant-item .info .etc_info {
+        font-size: 0.875rem;
+    }
+
+    .restaurant-item .info .etc, .restaurant-item .info .etc_info {
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .reverse .restaurant-item .info .etc, .reverse .restaurant-item .info .etc_info {
+        font-size: 0.875rem;
+    }
+
+    .restaurant-item .info .etc, .restaurant-item .info .etc_info {
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .pg-search.reverse .column-contents>.inner .module .search-list-restaurants-inner-wrap .list-restaurants>li {
+        padding: 0;
+        border: 0;
+    }
+
+    .pg-search .search-results .search-list-restaurants-inner-wrap .list-restaurants>li:nth-child(even) {
+        padding-left: 0;
+    }
+
+    .pg-search.reverse .column-contents>.inner .module .search-list-restaurants-inner-wrap .list-restaurants>li .list-restaurant-item:nth-child(odd) {
+        padding-right: 0;
+    }
+
+    .pg-search .search_result_empty_message {
+        margin: 70px auto 0;
+        width: 90%;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_title {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 65px;
+        word-break: break-word;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_title .mango_text {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_title {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 65px;
+        word-break: break-word;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_title {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 65px;
+        word-break: break-word;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_content {
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_content .search_result_empty_message_content_sub_title {
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .pg-search .search_result_empty_message .search_result_empty_message_content .search_result_empty_message_content_list {
+        margin-left: 11px;
+    }
+
+
+    .search-filter .connect-mp-app {
+        display: none;
+        position: absolute;
+        top: 260px;
+        right: 0;
+        bottom: 60px;
+        left: 0;
+        margin: 0;
+        padding-top: 0px;
+        border-top: 1px solid #dbdbdb;
+        background: #f7f7f7 url(/assets/mobile/bg_filter@2x.png) center top no-repeat;
+        background-size: 375px auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+    }
+
+    .reverse .search-filter .submit-container {
+        right: 66.667%;
+        min-width: 352px;
+    }
+
+    .search-filter .submit-container {
+        overflow: hidden;
+        height: 90px;
+        min-width: 800px;
+        width: 100%;
+    }
+
+    .search-filter .submit-container .btn.cancel {
+        background-color: #cbcbcb;
+    }
+
+    .search-filter .submit-container .btn {
+        display: block;
+        float: left;
+        width: 50%;
+        font-size: 1.438rem;
+        color: #ffffff;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    .search-filter .submit-container .btn.submit {
+        background-color: #FF914D;
+    }
+    
+    .search-filter .submit-container .btn {
+        display: block;
+        float: left;
+        width: 50%;
+        font-size: 1.438rem;
+        color: #ffffff;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    .pg-search.reverse .column-side {
+    	min-height:2400px;
+        width: calc(88.5% - 0.3%);
+        background-color: #f6f6f6;
+    }
+
+    .pg-search .column-side {
+        position: relative;
+        right: 0;
+        height: 100%;
+        width: 400px;
+        background-color: #f6f6f6;
+    }
+
+    .pg-search .column-side {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* 지도 */
+    .map-container_wrap{
+        height: 33rem;
+        background-color: rgb(255, 236, 236);
+    }
+
+    .pg-search .map-container_wrap .btn-map {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 4;
+        width: 130px;
+        font-size: 1.000rem;
+        color: #ffffff;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50px;
+        background-color: rgba(0,0,0,0.43);
+    }
+
+
+
+    /* 지도 하단 */
+    .pg-search.reverse .column-side>.inner {
+        width: 800px;
+        margin: 0;
+    }
+    
+    .pg-search .column-side>.inner {
+        box-sizing: border-box;
+        padding: 0 24px;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .pg-search.reverse .column-side .column-module {
+        padding-bottom: 32px;
+        overflow: hidden;
+    }
+
+    .PaginationTypeNextPrev {
+        display: none;
+    }
+
+    .PaginationTypeNextPrev__Wrap {
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-justify-content: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        position: relative;
+    }
+
+    .pg-search.reverse .column-side .column-module .module {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .pg-search .module {
+        padding: 30px 0 0 0;
+    }
+
+    .pg-search .module>.title {
+        font-size: 1.438rem;
+    }
+
+    .list-type-ls>li {
+        padding-top: 32px;
+    }
+
+    .ls-item {
+        position: relative;
+    }
+
+    .ls-item .sponsored-badge {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        z-index: 1;
+        width: 48px;
+        height: 11px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/mobile-badge-sponsored-img.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .ls-item .thumb {
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .ls-item .thumb:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 47.0588235294%;
+    }
+
+    .ls-item .info .title.small {
+        font-size: 1.3rem;
+    }
+
+    .ls-item .info .title {
+        font-size: 1.500rem;
+        text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+        text-align: center;
+    }
+
+    .ls-item .info .desc.small {
+        font-size: .9rem;
+    }
+
+    .ls-item .info .desc {
+        margin-top: 7px;
+        font-size: 1.063rem;
+        text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+        text-align: center;
+    }
+
+    /* 오른쪽 우측 강남역 주변 지역 */
+    .pg-search.reverse .column-side .column-module .module {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .related-tags p {
+        padding-top: 14px;
+    }
+
+    .tag-item {
+        margin: 15px 3px 0 3px;
+        padding: 0 20px;
+        font-size: 0.938rem;
+        line-height: 38px;
+        letter-spacing: 0em;
+    }
+
+    /* 검색창 */
+.mapSearch{
+    margin-top: 10px;
+    width: 77%;
+}
+.searchForm{
+    display: block;
+    position: relative;
+    border: 0 0 1px solid #FF914D;
+    border-radius: 20px;
+    height: 39px;
+}
+
+.searchInputFormContainer{
+    display: block;
+    position: relative;
+    border: 1px solid #FF914D;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 61%;
+    left: 14px;
+    transform: translateY(-52%);
+    font-size: 24px;
+    pointer-events: none;
+}
+
+i.searchIcon {
+    display: inline-block;
+    margin-top: -0.2em;
+    vertical-align: middle;
+    text-transform: none;
+    line-height: 1;
+    font-family: wadizicon!important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+}
+
+.searchSection{
+    border:0;
+    text-overflow: inherit;
+    white-space: inherit;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    outline: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: none;
+    padding-right: 40px;
+    padding-left: 47px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 38px;
+    white-space: nowrap;
+    color: #000000;
+}
+
+.searchSection::placeholder{
+    color:#FF914D;
+}
+
+
+
+/* 오른쪽 아래 평점 */
+.reviewScoreWrap {
+    width: 100%;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    text-align: center;
+    margin: 16px 0 16px;
+}
+
+.reviewScore {
+    background: white;
+    padding: 10px 0;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.leftReviewScore{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 138px;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 138px;
+    -ms-flex: 0 0 138px;
+    flex: 0 0 347px;
+    border-right: 1px solid #ededed;
+    position: relative;
+    margin: 7px 0 4px 0;
+    bottom: 2px;
+}
+
+.starIcon {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    bottom: -37px;
+}
+
+/* 별모양 */
+.production-review-feed__header-v2__stars__badge>.icon>svg {
+    margin-right: 2px;
+}
+
+.badge{
+    display: inline-block;
+    font-size: 34px;
+    margin-left: 5px;
+    font-weight: 700;
+    position: relative;
+    bottom: -36px;
+}
+
+/* 리뷰 오른쪽 */
+.rightReviewScoreWrap {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin: 0 auto;
+}
+
+.production-review-feed__header-v2__stars__avg__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.production-review-feed__header-v2__stars__avg__container>.label_selected {
+    color: #35c5f0;
+    font-weight: 700;
+}
+
+.production-review-feed__header-v2__stars__avg__label {
+    color: #9e9e9e;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 2px;
+}
+
+.production-review-feed__header-v2__stars__avg__bar {
+    position: relative;
+    margin: 0 8px;
+    width: 205px;
+}
+
+.production-review-feed__header-v2__stars__avg__bar__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    display: inline-block;
+    background-color: #dadce0;
+    border-radius: 10px;
+    width: 205px;
+}
+
+.production-review-feed__header-v2__stars__avg__bar__color {
+    position: absolute;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #35c5f0;
+    height: 5px;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.production-review-feed__header-v2__stars__avg__container>.label_selected {
+    color: #35c5f0;
+    font-weight: 700;
+}
+
+.production-review-feed__header-v2__stars__avg__number {
+    display: inline-block;
+    color: #9e9e9e;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 4px;
+}
+
+
+/* 리뷰 필터 */
+.reviewFilter {
+    width: 100%;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    text-align: center;
+    margin: 16px 0 24px;
+}
+
+.reviewFilterUpper{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    border: solid #ededed;
+    border-width: 1px 0;
+    padding: 7px 0;
+    margin-bottom: 20px;
+}
+
+.reviewFilterRight{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -3px;
+}
+
+button.filterActive {
+    color: #35c5f0;
+}
+
+.reviewSecond {
+    cursor: pointer;
+    margin: 0 6px 0 0;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17px;
+    background: none;
+    border: none;
+    color: #757575;
+    transition: opacity .1s;
+}
+
+.filterPhoto {
+    padding-left: 12px;
+    border-left: 1px solid #ededed;
+    top: 0.5px;
+    position: relative;
+}
+
+.filterPhoto>.icon {
+    vertical-align: -4px;
+    margin-right: 2px;
+    margin-top: -4px;
+}
+
+.reviewFilterLeft {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0.1 0 auto;
+    display: block;
+}
+
+.filterbtnWrap {
+    position: relative;
+    display: inline-block;
+}
+
+.filterOptionBtn {
+    position: relative;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 7px 6px 6px 8px;
+    color: #757575;
+    background-color: #ededed;
+    border-radius: 4px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.filter-bar-control__button.button>.icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+}
+
+
+.reviewItem{
+    position: relative;
+}
+
+.reviewWriter, .reviewWriterInfo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.writerImage {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 4px;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.writerInfoId {
+    font-size: 13px;
+    color: #424242;
+    margin-bottom: 7px;
+}
+
+.reviewWriterInfoStarWrap{
+    display: inline;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.reviewWriterInfoTotalStar{
+    font-size: 16px;
+}
+
+.reviewWriterInfoTotalStar>svg{
+    margin-right: 2px;
+}
+
+.reviewWriterInfoDate {
+    vertical-align: 3px;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #757575;
+    position: relative;
+    bottom: -1px;
+}
+
+.reviewWriterInfoBottomWrap {
+    position: relative;
+    bottom: -14px;
+    left: -60px;
+    margin-top: 3px; 
+}
+
+.reviewItemImage{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reviewItemImageBtn {
+    width: 112px;
+    height: 112px;
+    border-radius: 4px;
+    position: relative;
+    top: 11px;
+    margin-top:5px;
+}
+
+.reviewComment{
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #424242;
+}
+
+.reviewCommentGood {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reviewCommentGoodBtn {
+    width: 114px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #35c5f0;
+    font-size: 15px;
+    color: #35c5f0;
+    font-weight: 500;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.reviewCommentGoodBtnTxt {
+    position: relative;
+}
+
+.reviewWritingForm{
+    position: relative;
+    display: flex;
+}
+
+.userWritingFormLogin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.userProfileImg {
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    margin-right: 12px;
+    border-radius: 100%;
+}
+
+.userCommentWrap {
+    position: relative;
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+}
+
+.userCommentForm {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 0;
+    box-sizing: border-box;
+    border: 1px solid #C2C8CC;
+    border-radius: 4px;
+    display: block;
+    padding: 0px 16px;
+    cursor: text;
+    position: relative;
+    width: 100%;
+}
+
+.userCommentFormReal {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 0;
+    box-sizing: border-box;
+    border: 1px solid #C2C8CC;
+    border-radius: 4px;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    padding: 6px 15px;
+    width: 100%;
+    padding: 0;
+    border: 0;
+}
+
+.userCommentWritingSector {
+    word-break: break-word;
+    cursor: text;
+    display: inline-block;
+    margin: 0px;
+    border: none;
+    background: none;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-family: inherit;
+    color: rgb(47, 52, 56);
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+    flex: 1 0 0%;
+    min-height: 44px;
+    padding: 9px 0px;
+    box-sizing: border-box;
+    resize: none;
+    vertical-align: top;
+    overflow: hidden;
+    height: 44px;
+    min-width: 100px; 
+}
+
+.userCommentWritingSector::placeholder{
+    color:rgb(194, 200, 204);
+}
+
+.commentPhoto {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 24px;
+    padding: 9px 0;
+}
+
+.cameraImgWrap {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+.cameraImg {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.putComment {
+    display: inline-block;
+    margin: 0px -5px 0px 10px;
+    border: none;
+    background: none transparent;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-family: inherit;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 40px;
+    color: rgb(194, 200, 204);
+    flex-shrink: 0;
+    padding: 0px;
+}
+
+.commentPageNumber{
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.commentPageNumber>li{
+    display: inline-block;
+    font-size: 0;
+    
+}
+
+.pageBtn {
+    margin: 0 2px;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background: none;
+    font-size: 14px;
+    line-height: 0;
+    transition: opacity .1s;
+    cursor: pointer;
+    bottom: -1.5px;
+    position: relative;
+}
+
+.beforePageArrow{
+    margin-right:10px;
+}
+
+
+.beforePageBtn>svg {
+    transform: rotate(180deg);
+}
+
+.pageBtnNumber {
+    display: block;
+    min-width: 26px;
+    margin: 0 2px;
+    padding: 5.5px 5px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: Noto Sans KR,Noto Sans CJK KR,맑은 고딕,Malgun Gothic,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    color: #424242;
+    transition: background-color .1s,color .1s;
+    cursor: pointer;
+}
+
+.pageBtnNumber.clickNumber{
+    background-color: #35c5f0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.afterPageArrow {
+    margin-left: 8px;
+}
+
+
+}
+
+
+/* 검색 필터 영역 */
+
+@media only screen and (min-width: 5px){
+    .search-filter {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        left: 0;
+        z-index: 800;
+    }
+
+    .search-filter {
+        overflow-y: auto;
+    }
+
+    .search-filter>.inner {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .search-filter>.inner {
+        margin: 0;
+        height: calc(100vh - 161px);
+        overflow-y: auto;
+    }
+
+    .search-filter .filter-item {
+        padding: 20px 0 30px 0;
+    }
+
+    .search-filter .filter-item input[type=radio]+label {
+        box-sizing: border-box;
+        margin: 0 1.5%;
+        max-width: 275px;
+        width: 45%;
+        font-size: 1.000rem;
+        line-height: 46px;
+        border-radius: 50px;
+    }
+
+    .search-filter .filter-item {
+        padding: 20px 0 30px 0;
+    }
+
+    .search-filter .filter-item .options {
+        top: 18px;
+        right: 0px;
+        font-size: 0.875rem;
+    }
+
+    .search-filter .filter-item>label {
+        font-size: 1.125rem;
+        color: #000000;
+        text-align: left;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].cost+label.cost-zoom {
+        zoom: 0.9;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].cost+label {
+        margin: 0 5px;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].food+label {
+        margin-right: 5%;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label {
+        display: inline-block;
+        margin-right: 68px;
+        width: 105px;
+        font-size: 1.000rem;
+        color: #cbcbcb;
+        text-align: center;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label {
+        margin: 0 30px;
+        font-size: 1.063rem;
+        line-height: 20px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label span {
+        line-height: 20px;
+    }
+
+    .search-filter .filter-item input[type=checkbox]+label span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+
+    .search-filter .filter-item input[type=checkbox]+label {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 275px;
+        width: 45%;
+        line-height: 46px;
+        font-size: 1.000rem;
+    }
+
+
+
+    .search-filter .filter-item input[type=checkbox]+label.small {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 23px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food01:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -333px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food02:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px 0px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food03:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -222px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food04:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food05:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px -222px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food06:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px 0px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food07:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -222px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food08:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -333px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label:before {
+        content: '';
+        display: block;
+        margin: 0 auto;
+    }
+
+    
+
+    .search-filter .filter-item .btn-region-cancel:before {
+        content: '';
+        display: inline-block;
+        margin: -4px 8px 0 0;
+        vertical-align: middle;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -995px -836px;
+        width: 11px;
+        height: 11px;
+    }
+
+    .pg-search .module:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: -100%;
+        left: -100%;
+        height: 1px;
+        background-color: #dbdbdb;
+    }
+
+    .pg-search .search-results .search-options .btn {
+        font-size: 1.125rem;
+    }
+
+    .pg-search .search-results .search-options .btn.filter:before {
+        margin: -2px 12px 0 0;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -974px -304px;
+        width: 23px;
+        height: 22px;
+    }
+
+    .pg-search .search-results .search-options .btn.map {
+        display: none;
+    }
+
+    .pg-search .search-results .search_info .title {
+        font-size: 1.36rem;
+    }
+
+    .RelatedContentSlider__Wrap {
+        display: none;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost01 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -480px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost01 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -384px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost02 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -288px;
+        width: 95px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost02 {
+        padding-right: 5px;
+        text-indent: -5px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -192px;
+        width: 95px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost03 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px 0px;
+        width: 101px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost03 {
+        padding-right: 11px;
+        text-indent: -12px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -96px;
+        width: 101px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost04 {
+        padding-right: 15px;
+        text-indent: -15px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -700px;
+        width: 105px;
+        height: 90px;
+    }
+    
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost04 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -700px;
+        width: 105px;
+        height: 90px;
+    }
+
+
+    /* 음식종류 */
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food01:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -111px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food02:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -444px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food03:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -222px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food04:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food05:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px -111px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food06:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -333px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food07:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food08:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label {
+        color: #FF914D;
+    }
+
+}

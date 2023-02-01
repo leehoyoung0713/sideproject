@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Comments">
+
+	<select id="selectCommentDefault" resultType="CommentsDTO">
+		select c.comments_number,c.comments_datetime,c.comments_content,c.user_number,c.post_number,u.user_id 
+		from tbl_comments c,tbl_post p,tbl_user u where c.post_number=p.post_number and c.user_number=u.user_number group by c.comments_number 
+		order by c.comments_datetime desc
+	</select>
+	
+	<select id="selectCommentRow" parameterType="map" resultType="CommentsDTO">
+		select c.comments_number,c.comments_datetime,c.comments_content,c.user_number,c.post_number,u.user_id 
+		from tbl_comments c,tbl_post p,tbl_user u where c.post_number=p.post_number and c.user_number=u.user_number group by c.comments_number 
+		order by c.comments_datetime desc limit #{startIndex},1
+	</select>
+	
+	<!-- usernumber는 getsession으로 받아와서 추가해야된다. -->
+	<insert id="insertComment" parameterType="CommentsDTO">
+		insert into tbl_comments (comments_content,user_number,post_number) values (#{commentsContent},#{userNumber},#{postNumber})
+	</insert>
+	
+	<!-- usernumber는 getsession으로 받아와서 추가해야된다. -->
+	<update id="updateComment" parameterType="CommentsDTO">
+		update tbl_comments set comments_content=#{commentsContent},comments_datetime=#{commentsDatetime} where comments_number=#{commentsNumber}
+	</update>
+	
+	<delete id="deleteComment" parameterType="_int">
+		delete from tbl_comments where comments_number=#{commentsNumber}
+	</delete>
+	
+	<!-- following쿼리문에서 재사용 -->
+	<select id="selectFollowerCommentDefault" parameterType="_int" resultType="CommentsDTO">
+		select c.comments_number,c.comments_datetime,c.comments_content,c.user_number,c.post_number,u.user_id 
+		from tbl_comments c,tbl_post p,tbl_user u where c.post_number=p.post_number and c.user_number=u.user_number and p.user_number=#{userNumber} group by c.comments_number 
+		order by c.comments_datetime desc
+	</select>
+	
+</mapper>

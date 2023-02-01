@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="PlaceReviewFile">
+
+	<insert id="insert" parameterType = "placeReviewFileVO">
+		insert into tbl_review_file
+		(review_file_system_name, review_file_origin_name, place_review_number)
+		values(#{reviewFileSystemName}, #{reviewFileOriginName}, #{placeReviewNumber});
+	</insert>
+	
+</mapper>

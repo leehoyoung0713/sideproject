@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+    color :rgba(0,0,0,.84)
+}
+
+header{
+    margin-top: 14px;
+    border-bottom: 1px solid #f0f2f5;
+    padding-bottom: 11px;
+}
+div#logo{
+    display: inline-block;
+    margin-left: 112px;
+}
+
+span#join_in{
+    position: absolute;
+    right: 80px;
+    left: auto;
+    font-size: 15px;
+    
+} 
+span#login{
+    position: absolute;
+    right: 150px;
+    left: auto;
+    font-size: 15px;
+}
+
+main#top{
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    width: 100%;
+    max-width: 368px;
+    overflow: hidden;
+    text-align: center;
+    height: 330px;
+    padding-bottom: 500px;
+}
+
+
+
+
+main#top h2{
+margin: 0 auto;
+max-width: 348;
+padding-top: 74px;
+padding-left: 7px;
+font-size: 36px;
+padding-bottom: 7px;
+padding-left: 0;
+margin-bottom: 16px;
+text-align: left;
+
+}
+main#middle{
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    width: 100%;
+    max-width: 368px;
+    overflow: hidden;
+    text-align: center;
+}
+
+input{
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    max-width: 334px;
+    height: 42px;
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 200;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.15);
+    color: 1px solid rgba(0,0,0,.84);
+    background-color: #ffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance : none;
+}
+
+
+#userName{
+    margin-bottom: 12px;
+}
+
+p.forgot{
+    color: rgba(0,0,0,.54);
+    float: right;
+    line-height: 24px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#btnLogin{
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 39px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-color: #00c4c4;
+    border-radius: 3px;
+    background-color: #00c4c4;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+#kakaoLogin{
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 12px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    border-color: #fee500;
+    background-color: #fee500;
+    color: #495057;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+#naverLogin{
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 12px 0 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #0c0c0c;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+#kakaoLogin svg{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 592px;
+    top: 454px;
+    display: block;
+    fill: #495057;
+}
+
+#naverLogin svg{
+    position: fixed;
+    width: 21px;
+    height: 29px;
+    left: 616px;
+    top: 414px;
+    display: block;
+    fill: #fff;
+    display: inline-flex;
+    align-items: center;
+}
+
+#circle_btns{
+    display: flex;
+
+    margin-top : 56px;
+    padding-left: 94px
+    
+}
+#circle_btns svg{
+    position: relative;
+    bottom: -4px;
+}
+.circle_btns#google{
+    border-radius: 999em;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-color: #ced4da;
+    background-color: #fff;
+    border: 1px solid #cdd3d8;
+    background-color: transparent;
+    color: #495057;
+
+    
+}
+
+.circle_btns#facebook{
+    
+    background-color: #1877f2;
+    margin-left: 12px;
+    border: #1877f2 1px solid;
+    color : #fff;
+    border-radius: 999em;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 7px;
+    font-weight: 500;
+
+}
+
+.circle_btns#facebook svg{
+    background-color: transparent;
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.circle_btns#apple{
+    margin-left: 12px;
+    border-radius: 999em;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-color: #000;
+    background-color: #000;
+}
+.circle_btns#apple svg{
+    background-color: transparent;
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+img{
+    position: fixed;
+    right: 18px;
+    bottom: 40px;
+}
+
+footer p{
+    display: block;
+    text-align: center;
+    font-family: inherit;
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 82px;
+    padding-bottom : 96px;
+    margin-bottom : 0px;
+}
+footer a{
+    color : #00c4c4;
+}
+
+.input-text{
+    border : 1px solid rgba(0,0,0,.15);
+    background: #fff;
+    font: inherit
+}
+
+.modalclass_header {
+    border: none;
+}
+
+.idalter {
+    display: flex;
+    color: #f66;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -11px;
+    /* color: #868e96; */
+}
+
+article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Button_button__3ip2b.Button_lg__m4_5e {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3ip2b.Button_block__2nblq {
+    width: 100%;
+}
+
+button[class*=Button_button] {
+    -webkit-tap-highlight-color: transparent;
+}
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+
+.Button_button__3ip2b {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 9px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.Button_button__3ip2b span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__3ip2b .Button_children__VGHI5 {
+    vertical-align: top;
+}
+
+.SNSButtonList_appleIcon__e42Y0, .SNSButtonList_googleIcon__1DgBx, .SNSButtonList_kakaoIcon__1s6gw, .SNSButtonList_naverIcon__3TjPM {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.Button_button__3ip2b.Button_lg__m4_5e {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3ip2b.Button_block__2nblq {
+    width: 100%;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+
+}
+
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}

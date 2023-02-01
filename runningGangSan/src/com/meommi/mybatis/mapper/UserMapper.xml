@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+
+<!-- 아이디 중복 체크 -->
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(user_id) from tbl_user where user_id = #{userId}
+	</select>
+	
+	<!-- 가입 -->
+	<insert id="join" parameterType="userVO">
+		insert into tbl_user
+		(user_id, user_password, user_name, user_login_method) 
+		values(#{userId}, #{userPassword}, #{userName}, #{userLoginMethod})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="login" parameterType="userVO" resultType="_int">
+		select user_number
+		from tbl_user
+		where user_id=#{userId} and user_password=#{userPassword}
+	</select>
+	
+	<!-- 비밀번호 변경 -->
+	<update id="update" parameterType="userVO">
+		update tbl_user
+		set user_password=#{userPassword}
+		WHERE user_id=#{userId};
+	</update>
+	
+	<!-- 내 게시글 목록  -->
+	<select id="selectMyPost" parameterType="map" resultType="postDTO">
+		select post_number, post_content, post_datetime, user_number
+		from tbl_post 
+		where user_number = #{userNumber} 
+		order by post_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 내 게시글 사진  -->
+	<select id="selectPostFile" parameterType="_int" resultType="string">
+		select f.post_file_system_name
+		from tbl_post p, tbl_post_file f
+		where p.post_number = #{postNumber} and f.post_number = p.post_number 
+		order by p.post_number desc limit 0, 1
+	</select>
+
+	<!--내 게시글 수 -->
+	<select id="countMyPost" parameterType="_int" resultType="_int">
+		select count(post_number)
+		from tbl_post
+		where user_number = #{userNumber}
+	</select>
+	
+		<!-- 내 댓글 목록 -->
+	<select id="selectMyComment" parameterType="map" resultType="commentsVO">
+		select comments_number, comments_datetime, comments_content, user_number, post_number
+		from tbl_comments
+		where user_number = #{userNumber}
+		order by comments_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 내 댓글 수 -->
+	<select id="countMyComment" parameterType="_int" resultType="_int">
+		select count(comments_number)
+		from tbl_comments
+		where user_number = #{userNumber}
+	</select>
+	
+	<!-- 내 리뷰 목록 -->
+	<select id="selectMyReview" parameterType="map" resultType="placeReviewDTO">
+		SELECT place_review_number, place_review_contents, place_review_rating, place_review_datetime, user_number, place_id, place_name, place_address, user_name, place_review_helful
+		FROM meommi.tbl_place_review
+		where user_number = #{userNumber}
+		order by place_review_number desc limit #{startRow}, #{rowCount};
+	</select>
+	
+	<!-- 내 리뷰 사진  -->
+	<select id="selectReviewFile" parameterType="_int" resultType="string">
+		SELECT f.review_file_system_name 
+		FROM tbl_place_review r , tbl_review_file f 
+		where r.place_review_number = f.place_review_number and r.place_review_number = #{postNumber}
+	</select>
+	
+	<!-- 내 리뷰 수 -->
+	<select id="countMyReview" parameterType="_int" resultType="_int">
+		select count(place_review_number)
+		from tbl_place_review
+		where user_number = #{userNumber}
+	</select>
+	
+	<!-- 내가 좋아요한 리뷰 -->
+	<select id="selectMyPlace" parameterType="map" resultType="placeReviewDTO">
+ 		   select h.place_review_number , r.place_review_contents , r.place_review_rating, h.user_number , r.place_id ,r.place_name , r.place_address , r.user_name  
+		   from tbl_helful h, tbl_place_review r 
+		   where h.user_number = #{userNumber} and h.place_review_number = r.place_review_number
+		 order by h.place_review_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 내 장소 수 -->
+	<select id="countMyPlace" parameterType="_int" resultType="_int">
+		select count(place_review_number) 
+		from tbl_helful 
+		where user_number = #{userNumber}
+	</select>
+	
+	<!-- 로그인 회원사진 정보 -->
+	<select id="userProfile" parameterType="string" resultType="string">
+		select f.user_file_system_name 
+		from tbl_user tu , tbl_user_file f
+		where tu.user_number = f.user_number and tu.user_id = #{userId};
+	</select>
+	
+	<!-- 로그인 회원 정보 -->
+	<select id="loginUser" parameterType="string" resultType="userVO">
+		select user_number, user_id, user_password, user_name, user_login_method
+		from tbl_user
+		where user_id = #{userId};
+	</select>
+	
+	<!-- 내 정보 수정  -->
+	<update id="updateMyProfile" parameterType="userVO">
+		update tbl_user
+		set user_password= #{userPassword}, user_name= #{userName}
+		where user_number= #{userNumber}
+	</update>
+
+	
+</mapper>

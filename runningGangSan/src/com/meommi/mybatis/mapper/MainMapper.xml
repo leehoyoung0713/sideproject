@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main">
+
+	<select id="selectAll" resultType="MainDTO">
+	SELECT r.place_review_number, place_review_contents, place_review_rating, place_review_datetime, user_number, user_name, place_id, place_review_helful, f.review_file_system_name
+FROM tbl_place_review r, tbl_review_file f
+where r.place_review_number=f.place_review_number
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

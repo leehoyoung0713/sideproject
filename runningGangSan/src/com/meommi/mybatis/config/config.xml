@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
+   
+   <typeAliases>
+     <typeAlias type="com.meommi.app.main.vo.MainVO" alias="mainVO"/>
+     <typeAlias type="com.meommi.app.main.vo.MainDTO" alias="mainDTO"/>
+     <typeAlias type="com.meommi.app.user.vo.UserVO" alias="userVO"/>
+     <typeAlias type="com.meommi.app.user.vo.UserDTO" alias="userDTO"/>
+     <typeAlias type="com.meommi.app.userFile.vo.UserFileVO" alias="userFileVO"/>
+     <typeAlias type="com.meommi.app.reviewFile.vo.PlaceReviewFileVO" alias="placeReviewFileVO"/>
+     <typeAlias type="com.meommi.app.postFile.vo.PostFileVO" alias="postFileVO"/>
+     <typeAlias type="com.meommi.app.post.vo.PostVO" alias="postVO"/>
+     <typeAlias type="com.meommi.app.post.vo.PostDTO" alias="postDTO"/>
+     <typeAlias type="com.meommi.app.placeReview.vo.PlaceReviewVO" alias="placeReviewVO"/>
+     <typeAlias type="com.meommi.app.placeReview.vo.PlaceReviewDTO" alias="placeReviewDTO"/>
+     <typeAlias type="com.meommi.app.placeReview.vo.Criteria" alias="criteria"/>
+     <typeAlias type="com.meommi.app.funeral.vo.FuneralVO" alias="funeralVO"/>
+     <typeAlias type="com.meommi.app.follow.vo.FollowVO" alias="followVO"/>
+	 <typeAlias type="com.meommi.app.favoritePlace.vo.FavoritePlaceVO" alias="favoritePlaceVO"/>
+     <typeAlias type="com.meommi.app.comments.vo.CommentsVO" alias="commentsVO"/>
+     <typeAlias type="com.meommi.app.comments.vo.CommentsDTO" alias="commentsDTO"/>
+     
+   </typeAliases>
+
+   <environments default="mysql">
+      <environment id="mysql">
+         <transactionManager type="JDBC"/>
+         <dataSource type="POOLED">
+            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://127.0.0.1:3306/meommi"/>
+            <property name="username" value="meommi"/>
+            <property name="password" value="1234"/>
+         </dataSource>
+      </environment>
+   </environments>
+   
+   <mappers>
+      <mapper resource="com/meommi/mybatis/mapper/AbandonedAnimalsMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/CommentsMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/FavoritePlaceMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/FeedsearchMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/FollowMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/FuneralMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/MainMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/PlaceReviewMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/PostFileMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/PostMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/ReviewFileMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/UserMapper.xml"/>
+      <mapper resource="com/meommi/mybatis/mapper/UserFileMapper.xml"/>
+   </mappers>
+   
+</configuration>

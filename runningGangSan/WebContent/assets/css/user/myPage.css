@@ -1,0 +1,1331 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+
+body, html{
+    height: 100%;
+}
+body {
+    font-family: Roboto, 'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    overflow-y:scroll;
+}
+
+body, button, input, select, textarea{
+    font-weight: 400;
+}
+
+article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    -webkit-text-size-adjust: none;
+}
+
+body, body button, body input, body li, body ol, body select, body textarea, body ul {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    line-height: 1.5em;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, .84);
+    font-size: 15px;
+}
+
+#page-container{
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+.MyMummPage_mymummPage{
+    position: relative;
+    top: auto;
+    z-index: auto;
+    background-color: #fff;
+}
+
+.MyMummPage_mymummPage .MyMummPage_profileBackground {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    background-image: linear-gradient(263deg, #ff792a 100%,#00b2b2 0);
+    width: 100%;
+    height: 220px;
+}
+
+.MyMummPage_mymummPage .MyMummPage_profileBackground span{
+    display: block;
+    position: relative;
+    opacity: .54;
+    z-index: 1;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 760px;
+    height: 220px;
+    -webkit-filter: blur(24px);
+    filter: blur(24px);
+}
+.MyMummPage_mymummPage .MyMummPage_profileBackground:after {
+    display: block;
+    position: absolute;
+    top: 69px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px 0 rgb(33 37 41 / 16%);
+    width: 1025px;
+    height: 151px;
+    content: "";
+}
+.MyMummPage_mymummPage .MyMummPage_profileBackground:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    z-index: 2;
+/*     background: -moz-linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,.36) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,.36));
+ */ background: linear-gradient(180deg,rgba(0,0,0,.2) 0,rgba(0,0,0,.36));
+    width: 100%;
+    height: 220px;
+    content: "";
+}
+
+.MymummProfile_editProfile{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgb(33 37 41 / 12%);
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+.MymummProfile_editProfile svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 12px;
+    height: 12px;
+    fill: #495057;
+}
+
+.MyMummPage_inner{
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 1025px;
+}
+
+.MyMummUser_user{
+    overflow: hidden; 
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 1025px;
+}
+
+.MyMummUser_user:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.MyMummProfile_profileImage{
+    position: relative;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 50%;
+    vertical-align: middle;
+    float: none;
+    margin: 0 auto 13px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.MyMummPage_contentWrapper{
+    padding-top: 69px;
+    position: relative;
+    padding-left: 2px;
+}
+.MyMummProfile_profileContainer{
+    position: relative;
+    float: left;
+    padding: 56px 24px 0;
+    width: 184px;
+    background-color: #fff;
+}
+
+.MyMummProfile_profileImage
+.MymummProfile_detailProfile{
+    display: inline-block;
+    border-radius: 50%;
+    width: 78px;
+    height: 78px;
+}
+.MyMummProfile_profileImage
+.MymummProfile_detailProfile.avatar{
+    background-image: url('/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: url('profile_detail.png') no-repeat 50% cover; */
+}
+
+.MyMummProfile_profileUser {
+    margin: 0 auto;
+    padding: 7px 0 0;
+    max-width: 220px;
+}
+
+.MyMummProfile_profileUser strong{
+    display: block;
+    text-align: center;
+    color: #212529;
+    pointer-events: none;
+    line-height: 28px;
+    letter-spacing: -.6px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.MyMummProfile_profileUser strong i{
+    font-weight: 400;
+}
+
+em, i{
+    font-style: normal;
+}
+
+.MummProfile_setting{
+    display: block;
+    margin-top: 57px;
+    border-top: 1px solid #f2f4f6;
+    padding-top: 24px;
+}
+
+.MymummLoginMode_loginMode{
+    text-align: center;
+    color: #495057;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.MymummLoginMode_loginMode span{
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: top;
+    line-height: 28px;
+    letter-spacing: -.6px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.withIcon_icon{
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    fill: currentColor;
+}
+
+.MymummLoginMode_loginMode span svg{
+    width: 1em;
+    height: 1em;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.MymummLoginMode_kakaoIcon{
+    color: #3f2626;
+}
+
+.Button_button.Button_md{
+    padding: 9px 16px;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.Button_button.Button_block {
+    width:100%;
+}
+
+.Button_button.Button_circular {
+    border-radius: 999em;
+}
+
+a.Button_button {
+    display: inline-block;
+    align-items: center;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+a.Button_button.Button_block {
+    text-align: center;
+}
+
+.MummProfile_setting a {
+    display: block;
+    margin-top: 16px;
+    color: #495057;
+}
+
+.Button_button {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.Button_button span{
+    vertical-align:top;
+}
+
+.MyMummProfile_profileContainer:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.MyMumm_contents{
+    position: relative;
+    float: left;
+    background-color: #fff;
+    padding: 42px 32px 120px;
+    width: calc(100% - 296px);
+}
+
+.MyMumm_contents:before{
+    display: block;
+    position: absolute;
+    top: 26px;
+    bottom: 26px;
+    left: 0;
+    border-left: 1px solid #f2f4f6;
+    content: "";
+}
+
+.MymummSection_section {
+    background-color: #fff;
+    padding-top: 24px;
+    padding: 0;
+}
+
+.MymummSection_section:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.MymummOtherMenu_otherMenu{
+    padding-top: 24px;
+}
+
+.MymummMenu_menu{
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.MymummMenu_menu a,
+.MymummMenu_menu button{
+    padding: 16px 0;
+    display: block;
+    position: relative;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+
+.MymummMenu_text,
+.MymummMenu_menu button{
+    display: inline-block;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    color: #212529;
+}
+
+
+.MymummMenu_arrowIcon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    height: 20px;
+}
+
+.withIcon_icon__1w-D1 {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.MymummMenu_menu a
+.MymummMenu_arrowIcon svg{
+    fill: #adb5bd;
+}
+
+.page button:disabled{
+    background-color: none;
+}
+
+.page button{
+    background-color: none;
+}
+
+
+.MymummMenu_menu a:after,
+.MymummMenu_menu button:after{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #f2f4f6;
+    content: "";
+}
+
+.MymummProject_projectContainer{
+    position: relative;
+}
+
+.MymummProjectInfo_project{
+        margin: 0 0 8px;
+        position: relative;
+        border: 1px solid #dde2e6;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px 0 rgb(33 37 41 / 11%);
+        background-color: #fff;
+}
+
+body li, body ol, body ul {
+    list-style: none;
+}
+
+.MymummProjectInfo_projectList li {
+    display: inline-block;
+    width: 24%;
+}
+
+.MymummProjectInfo_projectList li a{
+    cursor: pointer;
+    padding: 24px 0;
+    display: block;
+    position: relative;
+}
+
+.MymummProjectInfo_projectList li:first-child span {
+    border-left: 0;
+}
+
+.MymummProjectInfo_projectList li span {
+    display: block;
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.MymummProjectInfo_projectList li span:before {
+    display: none;
+}
+
+.MymummProjectInfo_project .MymummProjectInfo_projectList li b {
+    display: block;
+    padding: 0 0 9px;
+    line-height: 38px;
+    letter-spacing: -.6px;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.MymummProjectInfo_projectList li+li span:before {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    margin-top: -8px;
+    border-left: 1px solid #e9ecef;
+    height: 60%;
+    content: "";
+}
+
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.MymummProjectInfo_projectLink{
+    border-radius: 0 0 12px 12px;
+    background-color: #f2f4f6;
+    overflow: hidden;
+}
+
+.MymummProjectInfo_projectLink li {
+    display: inline-block;
+    width: 49.2%;
+}
+
+.MymummProjectInfo_projectLink .withIcon_icon__1w {
+    width: 20px !important;
+    height: 20px !important;
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    fill: currentColor;
+}
+
+.MymummProjectInfo_projectLink li a {
+    display: block;
+    padding: 16px 6px;
+    text-align: center;
+    color: #495057;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.MymummProjectInfo_projectLink li a>span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.MymummProjectInfo_project .MymummProjectInfo_projectLink li a svg {
+    display: inline-block;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    fill: #495057;
+}
+
+.MymummProjectInfo_projectLink li a span * {
+    vertical-align: middle;
+}
+
+.withIcon_icon__1w-D1 {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.MymummEventBanner_pare {
+    display: flex;
+    justify-content: start;
+}
+
+element.style {
+    background-color: rgb(210, 217, 222);
+}
+
+.MymummShelterBanner_banner {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.banner_shelterBanner {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.06);
+    display: inline-block;
+    height: 112px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.MymummList_emptyList{
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+}
+
+.MymummList_list ul{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.MymummList_list .myPost{
+    padding: 20px 0 0;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.MymummList_list .myPost{
+    box-sizing: border-box;
+}
+
+.liked i:before{
+    display: inline-block;
+    margin-top: -1px;
+    margin-right: 4px;
+	margin-left: 5px;
+    background-color: #babdc0;
+    width: 2px;
+    height: 2px;
+    vertical-align: middle;
+    content: "";
+}
+
+.MymummList_list .info {
+    padding-bottom: 20px;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+.MymummList_list .title,
+.MymummList_list .place {
+    margin-right: 200px;
+    padding-bottom: 12px;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.MymummList_list .place {
+    padding-bottom: 0px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.MymummList_list .liked,
+.MymummList_list .created-at{
+    margin-right: 8px;
+    color: #696f75;
+    font-size: 13px;
+}
+
+.MymummList_list .myPost:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.MymummList_list .review{
+    margin-right: 200px;
+    font-size: 1.15rem;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #212529;
+}
+
+.MymummList_list .myPost .thumb {
+	width : 100%;
+	background-size : cover;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    padding-bottom: 108px;
+    width: 144px;
+}
+
+.MymummList_list .myPost .thumb{
+    float: right;
+    background-color: #eaeaea;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.MymummList_list .myPost .reple{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.MyMumm_contents .page {
+    padding: 0 16px 160px;
+    text-align: center;
+    color: #44484b;
+}
+
+.MyMumm_contents .page .pageButton {
+    display: block;
+}
+
+.prev-page {
+    margin-right: 16px;
+    left: 0;
+    position: static;
+    top: 0;
+}
+
+.page .pageButton button {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
+}
+
+.prev-page:before,
+.next-page:before {
+    margin-top: -3px;
+    margin: 0;
+}
+
+.icon-chevron-left:before{
+    background-image: url('https://w7.pngwing.com/pngs/265/585/png-transparent-computer-icons-arrow-previous-button-angle-triangle-internet-thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+.icon-chevron-right:before{
+    background-image: url('https://w7.pngwing.com/pngs/1010/528/png-transparent-black-arrow-computer-icons-caret-next-button-miscellaneous-angle-heart-thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+
+[class*=icon-]:before {
+    display: inline-block;
+    margin-top: -0.2em;
+    vertical-align: middle;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page span {
+    display: block;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+
+.text-hidden {
+    display: block;
+    margin-top: -1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.page a.current {
+    color: #34383a;
+    font-weight: 500;
+}
+
+.page a {
+    display: inline-block;
+    width: 32px;
+    line-height: 34px;
+    color: #7c8288;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.next-page {
+    top: 0;
+    margin-left: 16px;
+    position: static;
+    right: 0;
+}
+
+.profileSetting{
+    color: #4a4a4a;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.profileSetting button{
+    cursor: pointer;
+}
+
+.profileSetting h3{
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.btn_close{
+    float: right;
+    position: relative;
+    padding-right: 17px;
+    color: #898989;
+    letter-spacing: -0.65px;
+    background-color: inherit;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.profileSetting div {
+    display: block;
+}
+
+
+.btn_close:before{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -4px;
+    width: 14px;
+    height: 8px;
+    background: url('https://one-ap.amorepacific.com/auth/images/common/btn_keyboard_open.png') no-repeat 0 0;
+    -webkit-background-size: 14px auto;
+    transform: rotate(180deg);
+    background-size: 14px auto;
+    content: "";
+}
+
+
+.profileSetting h5 {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.profileSetting .profileimg {
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileimg em {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: no-repeat center center #fff;
+    background-size: cover;
+}
+
+.profileSetting .setting-profileimg {
+    display: block;
+    text-align: center;
+}
+
+.profileimg-wrap .setting-profileimg button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 13px;
+    color: #4a4a4a;
+    line-height: 13px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.setting-profileimg button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 13px;
+    color: #4a4a4a;
+    line-height: 13px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.profileSetting h5 {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.waccount-wrap .sub-text {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4a4a4a;
+}
+
+.check-list-wrap {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.check-list-wrap ul li {
+    float: left;
+    width: 50%;
+    margin-bottom: 15px;
+    height: 20px;
+}
+
+.check-list-wrap ul li input[type=checkbox] {
+    display: none;
+}
+
+.check-list-wrap ul li .input-check {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.check-list-wrap ul li .input-check .button_checked:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url('https://one-ap.amorepacific.com/auth/images/common/btn_check_on.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+.changeNick #result{
+    margin: 0px;
+    color: red;
+}
+
+.check-list-wrap ul li .input-check .button_unchecked:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url('https://one-ap.amorepacific.com/auth/images/common/btn_check_off.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+.check-list-wrap ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.input-text {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.input-text {
+    margin-right: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 75% !important;
+    padding: 0 17px;
+    margin-bottom: 7px;
+    height: 46px !important;
+    line-height: 45px;
+    font-size: 13px;
+    color: #4a4a4a;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+
+.input-text:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.duplicate_check{
+    width: 90px;
+    height: 44px;
+    font-size: 13px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #8c8881;
+    border: none;
+    box-sizing: border-box;
+}
+
+.textarea-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.textarea-wrap textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0 17px;
+    margin-bottom: 7px;
+    height: 100px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #4a4a4a;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    outline: none;
+    resize: none;
+}
+
+.btn-bottom {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.btn-div2 {
+    width: 100%;
+    padding: 0;
+}
+
+.btn-div2 li:first-child {
+    float: left;
+    width: 49%;
+}
+
+.btn-div2 li:last-child {
+    float: right;
+    width: 49%;
+    padding: 0;
+}
+
+.mm.button.gray {
+    background-color: #90949c;
+    color: #fff;
+    border-color: #90949c;
+}
+
+.mm.button.gray:hover {
+    border-color: #60656a;
+    background-color: #60656a;
+    color: #fff;
+}
+
+.btn-darkgray {
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 13px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #8c8881;
+    border: none;
+    box-sizing: border-box;
+}
+
+.mm.button {
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .2s;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 1;
+    color: rgba(0,0,0,.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+.mm.button.primary {
+    background-color: #ff792a;
+    color: #fff;
+}
+
+.mm.button.primary:hover {
+    border-color: #e06923;
+    background-color: #e06923;
+    color: #fff;
+}
+
+.mm.button.primary, .mm.button.primary-outline {
+    border-color: #ff792a;
+}
+
+.btn-mint {
+    display: block;
+    width: 100%;
+    height: 46px;
+    font-size: 13px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    background: #23dbab;
+    border: none;
+    box-sizing: border-box;
+}
+
+#uploadProfileImg, #editProfileImg {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.alertify-o-cover-hidden {
+    display: none;
+}
+
+.alertify-o-cover {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: .6;
+    -khtml-opacity: .6;
+    opacity: .6;
+}
+
+:root *>.alertify-o-hidden {
+    display: block;
+    visibility: hidden;
+}
+
+.alertify-o {
+    width: 300px;
+    margin-left: -150px;
+    top: 20%;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.alertify-o {
+    background: #fff;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 30%);
+/*     -webkit-background-clip: padding;
+    -moz-background-clip: padding; */
+    background-clip: padding-box;
+}
+
+
+
+.alertify-o {
+    font-family: Roboto,Noto Sans KR,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.alertify-o-hidden {
+    -webkit-transform: translateY(-150px);
+    -moz-transform: translateY(-150px);
+    -ms-transform: translateY(-150px);
+    -o-transform: translateY(-150px);
+    transform: translateY(-150px);
+    opacity: 0;
+    display: none;
+}
+
+.alertify-o-cover {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: .6;
+    -khtml-opacity: .6;
+    opacity: .6;
+}
+
+.alertify-o {
+    position: fixed;
+    z-index: 999999;
+    left: 50%;
+    opacity: 1;
+}
+
+/* .alertify-o-hide {
+    -webkit-transition: all .25s cubic-bezier(.6,-.28,.735,.045);
+    -moz-transition: all .25s cubic-bezier(.6,-.28,.735,.045);
+    -ms-transition: all .25s cubic-bezier(.6,-.28,.735,.045);
+    -o-transition: all .25s cubic-bezier(.6,-.28,.735,.045);
+    transition: all .25s cubic-bezier(.6,-.28,.735,.045);
+} */
+
+.alertify-o {
+/*    -webkit-transition: all .5s cubic-bezier(.175,.885,.32,1.275);
+    -moz-transition: all .5s cubic-bezier(.175,.885,.32,1.275);
+    -ms-transition: all .5s cubic-bezier(.175,.885,.32,1.275);
+    -o-transition: all .5s cubic-bezier(.175,.885,.32,1.275); */
+    transition: all .5s cubic-bezier(.175,.885,.32,1.275);
+}
+
+article, main, section, nav {
+    display: block;
+}
+
+.alertify-o-resetFocus {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.alertify-o-inner {
+    text-align: center;
+}
+
+article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.alertify-o-message {
+    margin-bottom: 30px;
+    font-size: 12px!important;
+    color: #4a4a4a;
+    line-height: 20px;
+}
+
+.alertify-o-message {
+    margin: 35px auto 40px;
+    padding: 2px 15px 0;
+    font-weight: 600;
+}
+
+.alertify-o-buttons {
+    margin-bottom: 20px;
+}
+
+.alertify-o-button-cancel, .alertify-o-button-cancel:focus, .alertify-o-button-cancel:hover {
+    outline: none;
+    border: none;
+    background: #9b9b9b !important;
+}
+
+.alertify-o-button, .alertify-o-button:active, .alertify-o-button:hover, .alertify-o-button:visited {
+    text-decoration: none;
+    border: none;
+    line-height: 1.5;
+    font-size: 100%;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.alertify-o-button, .alertify-o-button:focus, .alertify-o-button:hover {
+    width: 110px;
+    padding: 0;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.alertify-o-button {
+    color: #fff;
+    text-decoration: none;
+    box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 50%);
+}
+
+.alertify-o-button-ok, .alertify-o-button-ok:focus, .alertify-o-button-ok:hover {
+    outline: none;
+    border: none;
+    background: #ff792a !important;
+}
+
+.MyWadizMenu_icon {
+    display: inline-block;
+    padding-right: 12px;
+    height: 20px;
+    vertical-align: top;
+    margin-top: 2px;
+}
+

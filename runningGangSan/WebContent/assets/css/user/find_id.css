@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgba(0, 0, 0, .84);
+    letter-spacing: -.02em;
+    margin: 0;
+}
+
+
+.idCheckBody {
+	margin: 10px auto;
+    border-top: 1px solid transparent;
+    padding-top: 24px;
+    padding-bottom: 160px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.page-header h2 {
+    display: block;
+    padding-top: 56px;
+    padding-bottom : 36px;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+
+    color: rgba(0,0,0,.84);
+    /*line-height: 40px;*/
+    font-size: 32px;
+    font-weight: 700;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+div.page-body{
+    background: #f5f7fa;
+    display: block;
+    color:#ffff;
+    margin: 0;
+    padding: 0;
+}
+div.container{
+    margin: 0 auto;
+    border-top: 1px solid transparent;
+    padding-top: 24px;
+    padding-bottom: 160px;
+    width: 100%;
+    max-width: 380px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.account-find, .page-header, .tab-list ul {
+    padding: 0 16px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    color: rgba(0,0,0,.84);
+    list-style: none;
+}
+
+.tab-list{
+    width: 100%;
+    max-width: 1024px;
+    color: rgba(0,0,0,.84);
+}
+ul{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    vertical-align: baseline;
+}
+li{
+    display: inline-block;
+}
+.tab-list a{
+    
+
+    display: block;
+    width: 100%;
+    height: 47px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 48px;
+    font-size: 15px;
+    color : #90949c
+    
+
+}
+
+li.active a{
+   color: #FF914D;
+   border-bottom : 2px solid #FF914D;
+}
+
+
+
+div.wz_container_id-check{
+border-top: 1px solid transparent;
+margin-bottom: 40px;
+color: rgba(0,0,0,.54);
+line-height: 20px;
+font-size: 15px;
+font-weight: 400; 
+
+}
+p {
+    display: block;
+    margin-top:0;
+    margin-bottom: 33px;
+}
+
+ul{
+    width : 100%;
+}
+
+
+input{
+    /* height: 48px;
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 300;
+    transition-property: border-color,height,padding-right,color;
+    transition-duration: .2s,0s;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.15);
+    background: #fff;
+    padding: 0 0.94118em;
+    width: 100%;
+    vertical-align: middle;
+    color: rgba(0,0,0,.84);
+    font-family: roboto,Noto Sans KR,-apple-system,dotum,sans-serif;
+    font-size: 17px;
+    font-weight: 300; */
+
+    font: inherit;
+    position: relative;
+    margin: 0 0 0;
+    opacity: .60;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 100%;     
+    overflow: hidden;
+    height: 48px;
+    min-height: 48px;
+    display: block;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    color: #212529;
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font:inherit;
+    font-size: 16px;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+#btnIsJoinedEmail{
+
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 16px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-color:rgb(252 191 154);
+    border-radius: 3px;
+    background-color:rgb(252 191 154);
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+    /* border-color: #00b2b2;
+    background-color: #00b2b2;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 1;
+    color: rgba(0,0,0,.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none; */
+}
+
+
+#btnIsJoinedEmail{
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 16px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-color:rgb(252 191 154);
+    border-radius: 3px;
+    background-color:rgb(252 191 154);
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+.checkBtn {
+	font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 16px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-color:rgb(252 191 154);
+    border-radius: 3px;
+    background-color:rgb(252 191 154);
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.checkBtn:hover, .againBtn:hover{
+	background-color: rgb(231 166 126);
+}
+
+.againBtn:hover {
+	background-color: #f5f3f3;
+}
+
+.againBtn {
+	font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    margin: 16px 0 0;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-color:rgb(252 191 154);
+    border-radius: 3px;
+    background-color:white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    padding-top: 0.07em;
+    text-decoration: none;
+    cursor:pointer;
+}

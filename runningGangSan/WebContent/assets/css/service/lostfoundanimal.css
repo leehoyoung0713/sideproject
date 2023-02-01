@@ -1,0 +1,1102 @@
+@charset "UTF-8";
+#page-container, #wadizTopBanner, body > #root {
+	transform-origin: 50% 0;
+	transition-property: opacity,transform;
+	transition-duration: 80ms;
+	transition-timing-function: ease-out;
+}
+.web-header {
+	position: relative;
+	position: -webkit-sticky;
+	position: sticky;
+	top: -48px;
+	transition: top .25s;
+	z-index: 99;
+	width: 100%;
+}
+article, main, section {
+	display: block;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_visual__dNWlZ {
+	position: relative;
+	background: no-repeat 50% 50%/cover;
+	height: 280px;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_text__3J0Gz {
+	position: relative;
+	top: -16px;
+	border-radius: 16px 16px 0 0;
+	background-color: #fff;
+	padding: 32px 16px 0;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_titleBox__2fOPp {
+	position: relative;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_title__uPhCG {
+	margin-bottom: 32px;
+	padding-right: 56px;
+	line-height: 36px;
+	letter-spacing: -.6px;
+	color: rgba(0,0,0,.84);
+	font-size: 28px;
+	font-weight: 700;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_shareBox__3XdoA {
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	width: 56px;
+	height: 56px;
+}
+.StoreShare_container__12J22 {
+	cursor: pointer;
+}
+.StoreShare_container__12J22 svg {
+	width: 24px;
+	height: 24px;
+}
+.withIcon_icon__d0KdI {
+	display: block;
+	transform: scale(1);
+	transition: transform .3s ease-out;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_description__1iWKX {
+	line-height: 28px;
+	color: rgba(0,0,0,.54);
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing:-0.1em;
+	font-weight:bold;
+}
+.Collection_rootContainer__1O8QU {
+	margin: 0 auto;
+	padding: 0 16px;
+	max-width: 1140px;
+}
+.Collection_rootContainer__1O8QU .Collection_cardListContainer__2Yqjw {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; 이미지가 작아지는 문제 때문에 수정 */ 
+	justify-content: center;
+	margin-top: 64px;
+}
+.CardTable_container__1O6AF {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	list-style: none;
+}
+.CardTable_itemContainer__2f3YJ {
+	cursor: pointer;
+}
+.StoreCard_item__30rS1 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	text-decoration:none;/* a태그의 밑줄 속성이 상속되서 밑줄 없애는 속성을 추가함 */
+}
+.wz.container, body a {
+	color: rgba(0,0,0,.84);
+}
+body a {
+	text-decoration: none;
+}
+.CardThumbnail_thumbnailContainer__2aP0b {
+	position: relative;
+	border-radius: 8px;
+	background-color: #f2f4f6;
+	width: 100%;
+	overflow: hidden;
+}
+.CardThumbnail_thumbnailContainer__2aP0b .CardThumbnail_thumbnailPlaceholder__Yt4MC {
+	position: relative;
+	overflow: hidden;
+}
+.CardThumbnail_thumbnail__2grGx {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: .25s;
+	background: no-repeat 50%/cover border-box;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	min-height: 10px;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_title__3VYXn {
+	line-height: 20px;
+	letter-spacing: 0;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	display: -webkit-box;
+	margin-top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	color: #212529;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_subText__3RNiJ {
+	line-height: 18px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	margin-top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: nowrap;
+	color: #868e96;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_footer__ByS94 {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 6px;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_footer__ByS94 .StoreCard_priceGroup__iRexQ {
+	width: 100%;
+	position: relative;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_footer__ByS94 .StoreCard_priceGroup__iRexQ .StoreCard_priceContainer__1QVQh {
+	line-height: 18px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: 700;
+	font-style: normal;
+	display: inline-flex;
+	align-items: center;
+	flex-shrink: 0;
+	color: #495057;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_footer__ByS94 .StoreCard_priceGroup__iRexQ .StoreCard_priceContainer__1QVQh .StoreCard_price__2GK-N {
+	line-height: 28px;
+	letter-spacing: -.3px;
+	font-size: 16px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 24px;
+	font-family: Roboto;
+	margin-right: 2px;
+	color: #00b2b2;
+}
+.StoreCardFooter_container__DdTXV {
+	line-height: 18px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	color: #495057;
+	width: 100%;
+	display: inline-flex;
+	flex-direction: column;
+	margin-top: 2px;
+}
+.StoreCardFooter_container__DdTXV .StoreCardFooter_upperFooter__GuACh {
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.RatingScore_container__2cKSl {
+	font-family: Roboto;
+	display: flex;
+	margin-right: 8px;
+}
+.RatingScore_smCard02__MINsV .RatingScore_icon__3O00Z {
+	width: 12px;
+	height: 12px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.RatingScore_container__2cKSl .RatingScore_icon__3O00Z {
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMCAwaDMydjMySDB6Ii8+PHBhdGggZD0iTTAgMGgzMnYzMkgweiIvPjxwYXRoIGQ9Ik0xNiAyNi45OTRsLTcuNjIgNC43MWExLjk4IDEuOTggMCAwMS0yLjczOC0uNjY5Yy0uMjc0LS40NTQtLjM1OC0xLS4yMzctMS41MTlsMi4wNzEtOC43OS02Ljc4LTUuODc4YTIuMDMzIDIuMDMzIDAgMDEtLjIxNy0yLjg0MiAxLjk4OCAxLjk4OCAwIDAxMS4zNTUtLjY5OWw4Ljg5OC0uNzIxIDMuNDI5LTguMzQ1YTEuOTg0IDEuOTg0IDAgMDEzLjY3OC4wMDFsMy40MjggOC4zNDQgOC45LjcyMWEyLjAxIDIuMDEgMCAwMTEuODI3IDIuMTcxIDIuMDI1IDIuMDI1IDAgMDEtLjY5IDEuMzdsLTYuNzgxIDUuODc4IDIuMDcyIDguNzlhMi4wMTggMi4wMTggMCAwMS0xLjQ3NSAyLjQzIDEuOTczIDEuOTczIDAgMDEtMS41LS4yNDNMMTYgMjYuOTkzeiIgZmlsbD0iI0ZGQkUxQSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg==);
+	background-size: contain;
+}
+.RatingScore_smCard02__MINsV .RatingScore_score__3pgwL {
+	line-height: 20px;
+	letter-spacing: 0;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	margin-left: 3px;
+	color: #495057;
+}
+.ParticipantScore_container__1x-of {
+	line-height: 14px;
+	letter-spacing: 0;
+	font-size: 10px;
+	font-weight: 400;
+	font-style: normal;
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	box-sizing: border-box;
+	border: 1px solid #dde2e6;
+	border-radius: 9px;
+	padding: 1px 6px;
+	height: 18px;
+	color: #868e96;
+}
+.ParticipantScore_container__1x-of .ParticipantScore_peopleIcon__16qwx {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik00IDRhMS45OTQgMS45OTQgMCAwMS0yLTIuMDI4QzIgLjg5NSAyLjg5OCAwIDQgMGMxLjEwMiAwIDIgLjg5NSAyIDEuOTcyQzYgMy4xMzIgNS4xMDIgNC4wMDcgNCA0em0zLjU0MSA0SC40NkMuMTQzIDggMCA3Ljc5OSAwIDcuNTE2IDAgNi42ODIgMS4yNzggNC41IDQgNC41czQgMi4xODIgNCAzLjAxNkM4IDcuNzk5IDcuODU3IDggNy41NDEgOHoiIGZpbGw9IiM4NjhFOTYiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==);
+	width: 8px;
+	height: 8px;
+}
+.ParticipantScore_container__1x-of .ParticipantScore_peopleCountText__3A8QC {
+	margin-left: 4px;
+}
+.StoreCardFooter_container__DdTXV .StoreCardFooter_bottomFooter__2VkOB .StoreCardFooter_badgeFooter__1uz9u {
+	margin-top: 4px;
+}
+.DeliveryBadge_container__qGNgk {
+	display: inline-flex;
+	width: max-content;
+}
+.DeliveryBadge_container__qGNgk .DeliveryBadge_badge__2DeB2 {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 4px;
+	border-radius: 3px;
+	background-color: #f2f4f6;
+	line-height: 14px;
+	font-size: 10px;
+	font-weight: 500;
+	color: #212529;
+	margin-right: 4px;
+}
+.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_title__3VYXn,.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_subText__3RNiJ{
+	font-weight:600;
+}
+/* 검색,아이템 리스트 추가스타일 */
+
+
+input::placeholder {
+	color: #b5bcc3;
+	font-weight: bold;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+div {
+	display: block;
+}
+
+
+button {
+	background-color: transparent;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font: inherit;
+	box-sizing: border-box;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 8px;
+	text-align: center;
+	line-height: 56px;
+	color: #60656a;
+	font-size: 15px;
+}
+button {
+	background: none;
+	color: inherit;
+}
+/* .icon-searchs::before, i.icon.searchs::before, i.wadizicon.wa-searchs::before {
+	content: "\f002";
+	font: var(--fa-font-solid);
+} */
+[class*="icon-"]::before, i.icon::before, i.wadizicon {
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+}
+em, i {
+	font-style: normal;
+}
+
+
+
+
+
+/* 검색 추가스타일 끝 */
+/* 아이템리스트 추가스타일 */
+.RewardMainCategory_container__19OYY {
+	display: block;
+	position: relative;
+	z-index: 99999;
+	margin-top: -49px;
+	background: #fff;
+}
+.RewardMainWrapper_container__2HR7Y {
+	position: relative;
+	margin-bottom: 80px;
+}
+.RewardMainProjectList_listApp__2noRS {
+	margin-top: 0;
+}
+.RewardProjectListApp_container__1ZYeD {
+	position: relative;
+	margin: 40px auto;
+	max-width: 1032px;
+	box-sizing: content-box;
+}
+.ProjectCardList_container__3Y14k {
+	display: block;
+	position: relative;
+}
+.ProjectCardList_container__3Y14k .ProjectCardList_item__1owJa {
+	display: block;
+	margin: 17px 0;
+}
+.CommonCard_container__e_ebQ {
+	display: block;
+	position: relative;
+	clear: both;
+	min-height: 100px;
+	white-space: normal;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf {
+	display: block;
+	position: relative;
+	float: left;
+	z-index: 3;
+	margin-right: 12px;
+	width: 150px;
+	height: 100px;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_rect__2wpm4::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid rgba(0,0,0,.06);
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	pointer-events: none;
+	content: "";
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_rect__2wpm4 {
+	display: block;
+	position: relative;
+	background: #dadce0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_background__3toTR.CommonCard_visible__ABkYx {
+	transform: scale(1);
+	opacity: 1;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_background__3toTR {
+	display: block;
+	transform: scale(1.05);
+	transition: .25s ease-in-out;
+	transition-property: opacity,transform;
+	opacity: 0;
+	background: no-repeat 50%/cover border-box;
+	width: 100%;
+	height: 100%;
+}
+.CommonCard_container__e_ebQ .CommonCard_info__1f4kq {
+	position: relative;
+	z-index: 2;
+	margin-right: 16px;
+	line-height: 16px;
+	letter-spacing: 0;
+	color: #90949c;
+	font-size: 12px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.RewardProjectCard_infoTop__3QR5w {
+	height: 70px;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_info__1f4kq a {
+	color: #90949c;
+}
+.CardLink_link__1k83H {
+	display: block;
+	position: relative;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_title__iUtvs {
+	height: auto !important;
+}
+.CommonCard_container__e_ebQ .CommonCard_title__1oKJY {
+	display: block;
+	display: -webkit-box;
+	margin: 0 0 4px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 20px;
+	letter-spacing: -.3px;
+	white-space: normal;
+	color: rgba(0,0,0,.84);
+	font-size: 15px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk {
+	float: left;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk, .RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+	display: inline-block;
+	height: 16px;
+	vertical-align: top;
+	line-height: 16px;
+	color: #90949c;
+	font-size: 12px;
+	font-weight: 500;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH::before {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	margin: 0 6px;
+	background-color: #dadce0;
+	width: 1px;
+	height: 10px;
+	vertical-align: top;
+	content: "";
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+	display: block;
+	position: relative;
+	outline: none;
+	background-color: #fff;
+	padding-left: 11px;
+	max-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* page number추가 */
+.board-footer .pagination {
+	display: block;
+	position: relative;
+	margin-top: 32px;
+	margin-bottom: 26px;
+}
+.board a, .board div, .board input {
+	box-sizing: border-box;
+}
+.board-footer .pagination .page {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 36px;
+	color: #7c8288;
+}
+.board-footer .pagination .next-page::before, .board-footer .pagination .prev-page::before {
+	margin-top: 0px;
+}
+.icon-chevron-left::before, i.icon.chevron-left::before, i.wadizicon.wa-chevron-left::before {
+	content: "\f104";/* error */
+	font: var(--fa-font-solid);
+}
+.board-footer .pagination button {
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	font-size: 21px;
+}
+.board-footer .pagination .page span {
+	display: inline-block;
+	margin-right: 13px;
+	margin-left: 13px;
+}
+.board .text-hidden {
+	display: block;
+	margin-top: -1px;
+	height: 1px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+.board-footer .pagination .page a.current {
+	color: #34383a;
+	font-weight: 500;
+}
+.board-footer .pagination .page a {
+	display: inline-block;
+	width: 32px;
+	line-height: 34px;
+	color: #7c8288;
+}
+.board-footer .pagination button::before {
+	margin: 0;
+}
+.icon-chevron-right::before, i.icon.chevron-right::before, i.wadizicon.wa-chevron-right::before {
+	content: "\f105";/* error */
+	font: var(--fa-font-solid);
+}
+.board-footer .pagination .page a:hover {
+	color: #00b2b2;
+	font-weight: 500;
+}
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.board-footer {
+	padding: 0 16px 160px;
+	text-align: center;
+}
+/* page number추가 끝 */
+/* main > div > ul 스타일 추가 */
+.RewardMainTab_container__geHTr {
+	display: flex;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	justify-content: space-around;
+	transition: top .25s;
+	z-index: 1100;
+	background-color: #fff;
+	margin-top: 15px;
+}
+body li, body ol, body ul {
+	list-style: none;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+.RewardMainTab_container__geHTr > li {
+	flex-grow: 1;
+	text-align: center;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a {
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	font-size: 15px;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a span {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	color: #60656a;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a.RewardMainTab_active__1zRir > span::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #1d2129;
+	width: 100%;
+	height: 3px;
+	content: "";
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a.RewardMainTab_active__1zRir > span {
+	color: #1d2129;
+	font-weight: 700;
+}
+
+/* main > div > ul 스타일 추가 끝 */
+/* 검색 드롭다운리스트 추가 */
+.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	box-sizing: border-box;
+}
+#addtitle {
+	font-size: 24px;
+	font-weight: 600;
+	float: left;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+	display: inline-block;
+	margin-right: -5px;
+	border-right: 0;
+	width: auto;
+	vertical-align: bottom;
+	position: relative;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
+	display: block;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+	float: left;
+	padding: 10px 34px 10px 16px;
+	width: 100%;
+	line-height: 24px;
+	font-size: 15px;
+	-webkit-appearance: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	background: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
+	display: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+	width: 44px;
+	height: 44px;
+	font-size: 18px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+	display: block;
+	top: 0;
+	right: 0;
+	background-image: linear-gradient(90deg,transparent,#fff 80%);
+	width: 12px;
+	content: "";
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: rotate(90deg);
+	z-index: 1;
+	margin-top: -9px !important;
+	color: rgba(0,0,0,.54);
+	font-size: 18px;
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	content: "\f0d7";
+	font: var(--fa-font-solid);
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+	position: relative;
+	z-index: 1;
+	box-shadow: inset -1px 0 rgba(0,0,0,.1);
+	padding-right: 16px;
+	padding-left: 38px;
+	height: 44px;
+	line-height: 44px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.SortingSelect_container__8AOZQ {
+	display: inline-block;
+	position: relative;
+	line-height: 24px;
+	color: rgba(0,0,0,.87);
+	font-size: 15px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	line-height: 44px;
+	-webkit-appearance: none;
+}
+.SortingSelect_container__8AOZQ .SortingSelect_select__1etN_ {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	line-height: 24px;
+	font-size: 15px;
+}
+
+/* 검색 드롭다운리스트 추가 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 아이템 리스트 추가스타일 끝 */
+@media screen and (min-width:360px){
+	.RewardProjectCard_infoTop__3QR5w {
+		height: 80px;
+	}
+}
+@media screen and (min-width:769px){
+	/* 검색 추가스타일 */
+	
+	/* 검색 추가스타일 끝 */
+
+	/* 아이템 리스트 추가스타일 */
+	.RewardMainCategory_container__19OYY {
+		z-index: auto;
+		margin-top: 0;
+	}
+	.RewardProjectListApp_container__1ZYeD {
+		padding: 0 16px;
+	}
+	.ProjectCardList_container__3Y14k .ProjectCardList_list__1YBa2::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	.ProjectCardList_container__3Y14k .ProjectCardList_list__1YBa2 {
+		display: grid;
+	    grid-template-columns: repeat(3,calc(37.33333% - 30px));
+	    grid-row-gap: 37px;
+	    grid-column-gap: 10px;
+	    justify-content: space-between;
+	    margin-top: 24px;
+	    transition: opacity .25s;
+	}
+	.ProjectCardList_container__3Y14k .ProjectCardList_item__1owJa {
+		margin: 0;
+		width: auto;
+		clear:both;
+	}
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn {
+		min-height: auto;
+	}
+	
+	.regionSectionFirst, .regionSectionSecond{
+		text-align:left;
+	}
+	
+	.buttonpageSeach{
+		margin-top: 10px;
+	}
+	
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_background__3toTR, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4::after {
+		border-radius: 3px;
+	}
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf {
+		float: none;
+		margin-right: 0;
+		margin-bottom: 10px;
+		padding-top: 56.25%;
+		width: 100%;
+		height: auto;
+	}
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4 {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 70%;
+	    border-radius: 30px;
+	}
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_info__1f4kq {
+		margin-right: 0;
+	}
+	.CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_title__1oKJY {
+		margin-bottom: 4px;
+		height: auto;
+		max-height: none;
+		line-height: 24px;
+		font-size: 17px;
+	}
+	.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk, .RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+		font-size: 13px;
+	}
+	/* 아이템 리스트 추가스타일 끝 */
+	/* page number추가 */
+	.board-footer .pagination {
+		display: inline-block;
+		margin: 40px auto 21px;
+		min-width: 390px;
+	}
+	.board .desktop-only {
+		display: block;
+	}
+	.board-footer .pagination .prev-page {
+		margin-right: 16px;
+	}
+	.board-footer .pagination .next-page, .board-footer .pagination .prev-page {
+		position: static;
+	}
+	.board-footer .pagination .next-page > span, .board-footer .pagination .prev-page > span {
+		display: block;
+	}
+	.board-footer .pagination .next-page {
+		margin-left: 16px;
+	}
+	/* page number추가 끝 */
+	/* main > div > ul 스타일 추가 */
+	.RewardMainTab_container__geHTr {
+		position: relative !important;
+		top: auto !important;
+		box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+		background-color: #fff;
+	}
+	.RewardMainTab_container__geHTr > li {
+		display: inline-block;
+		margin-right: 8px;
+		margin-left: 8px;
+	}
+	.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a {
+		line-height: 48px;
+		color: rgba(0,0,0,.84);
+		font-size: 17px;
+	}
+	.RewardMainTab_container__geHTr .RewardMainTab_onlyLarge__1q7_V {
+		display: block;
+	}
+	/* main > div > ul 스타일 추가 끝 */
+	/* 검색 드롭다운리스트 추가 */
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		border-top: 0;
+		padding-right: 0;
+		padding-bottom: 8px;
+		padding-left: 0;
+		width: 98%;
+		text-align: right;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+		display: inline-block;
+		margin-right: -5px;
+		border-right: 0;
+		width: auto;
+		vertical-align: bottom;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+		transition: opacity .25s;
+		/* opacity: 0; */
+		padding-top: 6px;
+		padding-bottom: 6px;
+		outline: none;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+		width: 36px;
+		height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+		display: none;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+		display: inline-block;
+		margin-top: -.2em;
+		vertical-align: middle;
+		text-transform: none;
+		line-height: 1;
+		/* font-family: wadizicon !important; */
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		content: "\f0d7";
+		font: var(--fa-font-solid);
+		right: 0;
+		left: auto;
+		transform: rotate(0);
+		margin-top: -6px !important;
+		font-size: 12px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+		display: inline-block;
+		margin-left: 24px;
+		box-shadow: none;
+		padding-right: 18px;
+		padding-left: 0;
+		min-width: auto;
+		height: 36px;
+		vertical-align: bottom;
+		line-height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+		padding-right: 16px;
+		padding-left: 0;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz > .ProjectListHead_children__2Y7-F {
+		display: inline;
+	}
+	/* 검색 드롭다운리스트 추가 끝 */
+}
+@media screen and (min-width:1097px){
+    .web-header {
+        position: static;
+    }
+    .StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_visual__dNWlZ {
+        height: 440px;
+    }
+	.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_text__3J0Gz {
+		top: 0;
+		margin: -56px auto 0;
+		border-radius: 24px;
+		box-shadow: 0 8px 32px 0 rgba(10,22,70,.04),0 8px 8px 0 rgba(10,22,70,.04);
+		/* padding: 56px 170px; 양쪽까지 채우는 문제 때문에 좌우 패딩170px 없애는 걸로 수정함 */
+		padding:56px;
+		max-width: 1140px;
+		text-align: center;
+	}
+	.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_title__uPhCG {
+		padding-right: 0;
+	}
+	.StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_shareBox__3XdoA {
+		right: 40px;
+	}
+	.Collection_rootContainer__1O8QU {
+		padding: 0;
+	}
+	.Collection_rootContainer__1O8QU .Collection_cardListContainer__2Yqjw {
+		margin-top: 80px;
+	}
+	.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_title__3VYXn {
+		line-height: 24px;
+		letter-spacing: -.6px;
+		font-size: 16px;
+	}
+	.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_footer__ByS94 {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	/* 아이템 리스트 추가스타일 */
+
+	/* 아이템 리스트 추가스타일 끝 */
+
+	/* page number추가 */
+
+	/* page number추가 끝 */
+	/* main > div > ul 스타일 추가 */
+	.RewardMainTab_container__geHTr {
+		justify-content: center;
+		padding: 0 80px;
+	}
+	.RewardMainTab_container__geHTr > li:first-child {
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.RewardMainTab_container__geHTr > li {
+		max-width: 120px;
+	}
+	.RewardMainTab_container__geHTr > li:last-child {
+		margin-right: 0;
+		padding-right: 0;
+	}
+	/* main > div > ul 스타일 추가 끝 */
+	/* 검색 드롭다운리스트 추가 */
+
+	/* 검색 드롭다운리스트 추가 끝 */
+	
+	
+	
+}
+
+.buttonpageSeach {
+	border: none;
+    color: #fff;
+    font: inherit;
+    margin-left: 8px;
+    min-width: 50px;
+    height: 48px;
+    padding: 9px 16px;
+    line-height: 1.45;
+    opacity: .45;
+    position: relative;
+    transition-property: background-color, border-color, color, opacity;
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #ff914d;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 13px 13px 13px 13px;
+    cursor: pointer;
+}
+	
+	.catDog{
+		text-align: left;
+	}
+	
+	button:hover{
+		opacity: 100%;
+	}
+	
+	.RewardProjectCard_category__2muXk{
+		width:230px; 
+		white-space:nowrap; 
+		overflow:hidden; 
+		text-overflow:ellipsis;
+	}
+	
+	.kindbuttonpage{
+		background: #df6b6b;
+	}
+	
+	.searchSector{
+		width: 132px;
+	}
+	
+	.buttonpageSeachimpack {
+	  border: none;
+    color: #fff;
+    font: inherit;
+    margin-left: 8px;
+    min-width: 93px;
+    height: 48px;
+    padding: 9px 16px;
+    line-height: 1.45;
+    opacity: .45;
+    position: relative;
+    transition-property: background-color, border-color, color, opacity;
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #d55506;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 13px 13px 13px 13px;
+    cursor: pointer;
+	}
+	

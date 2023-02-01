@@ -1,0 +1,775 @@
+@charset "UTF-8";
+#addtitle{
+    font-size:24px;
+    font-weight:600;
+    float:left;
+}
+#image{
+    text-align:center;
+    width:100%;
+    margin-top:15px;
+    background-size:cover;
+}
+/* font: var(--fa-font-solid);fontawesome사용할시 추가 */
+/* article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+	-webkit-text-size-adjust: none;
+}
+a, address, article, aside, audio, b, body, button, canvas, caption, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, img, input, label, legend, li, nav, ol, p, pre, section, small, span, strong, summary, table, tbody, td, th, thead, time, tr, ul, video {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font: inherit;
+	box-sizing: border-box;
+}
+body {
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body, button, input, select, textarea {
+	font-family: Roboto,Noto Sans KR,-apple-system,Dotum,sans-serif;
+	font-weight: 400;
+}
+body, body button, body input, body li, body ol, body select, body textarea, body ul {
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body, body button, body input, body select, body textarea {
+	font-family: roboto,Noto Sans KR,-apple-system,dotum,sans-serif;
+}
+body {
+	overflow-y: scroll;
+	line-height: 1.5em;
+	letter-spacing: -.02em;
+	color: rgba(0,0,0,.84);
+	font-size: 15px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+} */
+
+/* main */
+#page-container, #wadizTopBanner {
+	transform-origin: 50% 0;
+	transition-property: opacity,transform;
+	transition-duration: 80ms;
+	transition-timing-function: ease-out;
+}
+article, main, section {
+	display: block;
+}
+#main-app .web-header {
+	z-index: 1201;
+}
+.MainWrapper_content__GZkTa {
+	transition: padding-top .25s;
+	padding-top: 0;
+}
+.RewardMainTab_container__geHTr {
+	display: flex;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	justify-content: space-around;
+	transition: top .25s;
+	z-index: 1100;
+	background-color: #fff;
+    margin-top:15px;
+}
+body li, body ol, body ul {
+	list-style: none;
+}
+.RewardMainTab_container__geHTr > li {
+	flex-grow: 1;
+	text-align: center;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a {
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	font-size: 15px;
+}
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a span {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	color: #60656a;
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a.RewardMainTab_active__1zRir > span::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #1d2129;
+	width: 100%;
+	height: 3px;
+	content: "";
+}
+.RewardMainTab_container__geHTr .RewardMainTab_link___1r2a.RewardMainTab_active__1zRir > span {
+	color: #1d2129;
+	font-weight: 700;
+}
+.RewardMainTab_container__geHTr > li:last-child {
+	padding-right: 16px;
+}
+.RewardMainCategory_container__19OYY {
+	display: block;
+	position: relative;
+	z-index: 99999;
+	margin-top: -49px;
+	background: #fff;
+}
+.RewardMainWrapper_container__2HR7Y {
+	position: relative;
+	margin-bottom: 80px;
+}
+.RewardMainProjectList_listApp__2noRS {
+	margin-top: 0;
+}
+.RewardProjectListApp_container__1ZYeD {
+	position: relative;
+	margin: 40px auto;
+	max-width: 1032px;
+	box-sizing: content-box;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	box-sizing: border-box;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+	display: inline-block;
+	margin-right: -5px;
+	border-right: 0;
+	width: auto;
+	vertical-align: bottom;
+    position:relative;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
+	display: block;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+	float: left;
+	padding: 10px 34px 10px 16px;
+	width: 100%;
+	line-height: 24px;
+	font-size: 15px;
+	-webkit-appearance: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	background: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
+	display: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+	width: 44px;
+	height: 44px;
+	font-size: 18px;
+}
+button {
+	background: none;
+	color: inherit;
+}
+/* .icon-searchs::before, i.icon.searchs::before, i.wadizicon.wa-searchs::before {
+	content: "\f002";
+    font: var(--fa-font-solid);fontawesome사용할시 추가
+    헤더의 클래스명과 겹쳐서 searchs로 변경
+} */
+[class*="icon-"]::before, i.icon::before, i.wadizicon {
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	/* speak: none; */
+}
+em, i {
+	font-style: normal;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+	display: block;
+	top: 0;
+	right: 0;
+	background-image: linear-gradient(90deg,transparent,#fff 80%);
+	width: 12px;
+	content: "";
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: rotate(90deg);
+	z-index: 1;
+	margin-top: -9px !important;
+	color: rgba(0,0,0,.54);
+	font-size: 18px;
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	/* speak: none; */
+	content: "\f0d7";
+    font: var(--fa-font-solid);
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+	position: relative;
+	z-index: 1;
+	box-shadow: inset -1px 0 rgba(0,0,0,.1);
+	padding-right: 16px;
+	padding-left: 38px;
+	height: 44px;
+	line-height: 44px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.SortingSelect_container__8AOZQ {
+	display: inline-block;
+	position: relative;
+	line-height: 24px;
+	color: rgba(0,0,0,.87);
+	font-size: 15px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	line-height: 44px;
+	-webkit-appearance: none;
+}
+.SortingSelect_container__8AOZQ .SortingSelect_select__1etN_ {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	line-height: 24px;
+	font-size: 15px;
+}
+.ProjectCardList_container__3Y14k {
+	display: block;
+	position: relative;
+}
+.ProjectCardList_container__3Y14k .ProjectCardList_list__1YBa2 {
+	display: block;
+	transition: opacity .25s;
+    margin-top:24px;/* 수정한 부분 */
+}
+.ProjectCardList_container__3Y14k .ProjectCardList_item__1owJa {
+	display: block;
+	margin: 17px 0;
+}
+.CommonCard_container__e_ebQ {
+	display: block;
+	position: relative;
+	clear: both;
+	min-height: 100px;
+	white-space: normal;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf {
+	display: block;
+	position: relative;
+	float: left;
+	z-index: 3;
+	margin-right: 12px;
+	width: 150px;
+	height: 100px;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_rect__2wpm4::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid rgba(0,0,0,.06);
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	pointer-events: none;
+	content: "";
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_rect__2wpm4 {
+	display: block;
+	position: relative;
+	background: #dadce0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_background__3toTR.CommonCard_visible__ABkYx {
+	transform: scale(1);
+	opacity: 1;
+}
+.CommonCard_container__e_ebQ .CommonCard_image__vaqkf .CommonCard_background__3toTR {
+	display: block;
+	transform: scale(1.05);
+	transition: .25s ease-in-out;
+	transition-property: opacity,transform;
+	opacity: 0;
+	background: no-repeat 50%/cover border-box;
+	width: 100%;
+	height: 100%;
+}
+.CommonCard_container__e_ebQ .CommonCard_info__1f4kq {
+	position: relative;
+	z-index: 2;
+	margin-right: 16px;
+	line-height: 16px;
+	letter-spacing: 0;
+	color: #90949c;
+	font-size: 12px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.RewardProjectCard_infoTop__3QR5w {
+	height: 70px;
+	box-sizing: border-box;
+}
+.CommonCard_container__e_ebQ .CommonCard_info__1f4kq a {
+	color: #90949c;
+}
+.CardLink_link__1k83H {
+	display: block;
+	position: relative;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_title__iUtvs {
+	height: auto !important;
+}
+.CommonCard_container__e_ebQ .CommonCard_title__1oKJY {
+	display: block;
+	display: -webkit-box;
+	margin: 0 0 4px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 20px;
+	letter-spacing: -.3px;
+	white-space: normal;
+	color: rgba(0,0,0,.84);
+	font-size: 15px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk {
+	float: left;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk, .RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+	display: inline-block;
+	height: 16px;
+	vertical-align: top;
+	line-height: 16px;
+	color: #90949c;
+	font-size: 12px;
+	font-weight: 500;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH::before {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	margin: 0 6px;
+	background-color: #dadce0;
+	width: 1px;
+	height: 10px;
+	vertical-align: top;
+	content: "";
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+	display: block;
+	position: relative;
+	outline: none;
+	background-color: #fff;
+	padding-left: 11px;
+	max-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_percent__3TW4_ {
+	color: #00b2b2;
+	font-size: 15px;
+	font-weight: 700;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_amount__2AyJF, .RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece, .RewardProjectCard_info__3JFub .RewardProjectCard_percent__3TW4_ {
+	display: inline-block;
+	line-height: 24px;
+	color: #90949c;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_amount__2AyJF::before {
+	display: inline-block;
+	width: 6px;
+	text-align: center;
+	content: "·";
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece {
+	float: right;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece em {
+	color: #00c4c4;
+	font-style: normal;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_gauge__3p9US {
+	position: relative;
+	background-color: #e6eaed;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+}
+.RewardProjectCard_info__3JFub .RewardProjectCard_gauge__3p9US span {
+	display: block;
+	background-color: #00b2b2;
+	width: 20%;
+	height: 2px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input.ProjectListHead_active__3dETj {
+	opacity: 1;
+}
+/* page number추가 */
+.board-footer .pagination {
+	display: block;
+	position: relative;
+	margin-top: 32px;
+	margin-bottom: 26px;
+}
+.board a, .board div, .board input {
+	box-sizing: border-box;
+}
+.board-footer .pagination .page {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 36px;
+	color: #7c8288;
+}
+.board-footer .pagination .next-page::before, .board-footer .pagination .prev-page::before {
+	margin-top: 0px;
+}
+.icon-chevron-left::before, i.icon.chevron-left::before, i.wadizicon.wa-chevron-left::before {
+	content: "\f104";/* error */
+	font: var(--fa-font-solid);
+}
+.board-footer .pagination button {
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	font-size: 21px;
+}
+.board-footer .pagination .page span {
+	display: inline-block;
+	margin-right: 13px;
+	margin-left: 13px;
+}
+.board .text-hidden {
+	display: block;
+	margin-top: -1px;
+	height: 1px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+.board-footer .pagination .page a.current {
+	color: #34383a;
+	font-weight: 500;
+}
+.board-footer .pagination .page a {
+	display: inline-block;
+	width: 32px;
+	line-height: 34px;
+	color: #7c8288;
+}
+.board-footer .pagination button::before {
+	margin: 0;
+}
+.icon-chevron-right::before, i.icon.chevron-right::before, i.wadizicon.wa-chevron-right::before {
+	content: "\f105";/* error */
+	font: var(--fa-font-solid);
+}
+.board-footer .pagination .page a:hover {
+	color: #00b2b2;
+	font-weight: 500;
+}
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.board-footer {
+	padding: 0 16px 160px;
+	text-align: center;
+}
+/* page number추가 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main-end */
+@media screen and (min-width:360px){
+    .RewardProjectCard_infoTop__3QR5w {
+        height: 80px;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece.RewardProjectCard_isAchieve__1LcUu .RewardProjectCard_remainingDay__2TqyN {
+        display: inline-block;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece em::before {
+        display: inline-block;
+        width: 6px;
+        text-align: center;
+        color: #90949c;
+        content: "·";
+    }
+}
+@media screen and (min-width:769px){
+    /* main */
+    .RewardMainTab_container__geHTr {
+        position: relative !important;
+        top: auto !important;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+        background-color: #fff;
+    }
+    .RewardMainTab_container__geHTr > li {
+        display: inline-block;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    .RewardMainTab_container__geHTr .RewardMainTab_link___1r2a {
+        line-height: 48px;
+        color: rgba(0,0,0,.84);
+        font-size: 17px;
+    }
+    .RewardMainTab_container__geHTr .RewardMainTab_onlyLarge__1q7_V {
+        display: block;
+    }
+    .RewardMainCategory_container__19OYY {
+        z-index: auto;
+        margin-top: 0;
+    }
+    .RewardProjectListApp_container__1ZYeD {
+        padding: 0 16px;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        border-top: 0;
+        padding-right: 0;
+        padding-bottom: 8px;
+        padding-left: 0;
+        width: 100%;
+        text-align: right;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+        display: inline-block;
+        margin-right: -5px;
+        border-right: 0;
+        width: auto;
+        vertical-align: bottom;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+        transition: opacity .25s;
+        /* opacity: 0; */
+        padding-top:6px;
+        padding-bottom:6px;
+        outline:none;/* 입력시 테두리 보여서 추가설정 */
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+        width: 36px;
+        height: 36px;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+        display: none;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+        display: inline-block;
+        margin-top: -.2em;
+        vertical-align: middle;
+        text-transform: none;
+        line-height: 1;
+        /* font-family: wadizicon !important; */
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-style: normal;
+        font-variant: normal;
+        /* speak: none; */
+        content: "\f0d7";
+        font: var(--fa-font-solid);
+        right: 0;
+        left: auto;
+        transform: rotate(0);
+        margin-top: -6px !important;
+        font-size: 12px;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+        display: inline-block;
+        margin-left: 24px;
+        box-shadow: none;
+        padding-right: 18px;
+        padding-left: 0;
+        min-width: auto;
+        height: 36px;
+        vertical-align: bottom;
+        line-height: 36px;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+        padding-right: 16px;
+        padding-left: 0;
+    }
+    .ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz > .ProjectListHead_children__2Y7-F {
+        display: inline;
+    }
+    .ProjectCardList_container__3Y14k .ProjectCardList_list__1YBa2::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    .ProjectCardList_container__3Y14k .ProjectCardList_list__1YBa2 {
+        display: grid;
+        grid-template-columns: repeat(3,calc(33.33333% - 30px));
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+        justify-content:space-between;
+        margin-top:24;
+    }
+    .ProjectCardList_container__3Y14k .ProjectCardList_item__1owJa {
+        clear:both;
+        margin: 0;
+        width: auto;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn {
+        padding-bottom: 18px;
+        min-height: auto;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_background__3toTR, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4, .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4::after {
+        border-radius: 3px;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding-top: 56.25%;
+        width: 100%;
+        height: auto;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_image__vaqkf .CommonCard_rect__2wpm4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_info__1f4kq {
+        margin-right: 0;
+    }
+    .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn .CommonCard_title__1oKJY {
+        margin-bottom: 4px;
+        height: auto;
+        max-height: none;
+        line-height: 24px;
+        font-size: 17px;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk, .RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
+        font-size: 13px;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_percent__3TW4_ {
+        font-size: 17px;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_amount__2AyJF, .RewardProjectCard_info__3JFub .RewardProjectCard_days__3eece {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_gauge__3p9US {
+        height: 3px;
+    }
+    .RewardProjectCard_info__3JFub .RewardProjectCard_gauge__3p9US span {
+        height: 3px;
+    }
+	/* page number추가 */
+	.board-footer .pagination {
+		display: inline-block;
+		margin: 40px auto 21px;
+		min-width: 390px;
+	}
+	.board .desktop-only {
+		display: block;
+	}
+	.board-footer .pagination .prev-page {
+		margin-right: 16px;
+	}
+	.board-footer .pagination .next-page, .board-footer .pagination .prev-page {
+		position: static;
+	}
+	.board-footer .pagination .next-page > span, .board-footer .pagination .prev-page > span {
+		display: block;
+	}
+	.board-footer .pagination .next-page {
+		margin-left: 16px;
+	}
+	/* page number추가 끝 */
+    /* main-end */
+}
+@media screen and (min-width:1097px){
+    /* main */
+    .web-header {
+        position: static;
+    }
+    .MainWrapper_content__GZkTa {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .RewardMainTab_container__geHTr {
+        justify-content: center;
+        padding: 0 80px;
+    }
+    .RewardMainTab_container__geHTr > li:first-child {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .RewardMainTab_container__geHTr > li {
+        max-width: 120px;
+    }
+    .RewardMainTab_container__geHTr > li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+	/* page number추가 */
+
+	/* page number추가 끝 */
+    /* main-end */
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Follow">
+	
+	<!-- 팔로잉 목록 -->
+	<select id="followingList" parameterType="_int" resultType="userDTO">
+		select following_number,u.user_number, u.user_id, u.user_name  from tbl_follow f, tbl_user u
+		where follower_number = #{userNumber} and f.following_number = u.user_number;
+	</select>
+	
+	<!-- 유저 목록 3개씩 랜덤으로  -->
+	<select id="randomUser" resultType="userDTO">
+		select u.user_number , u.user_id , u.user_name  from tbl_user u 
+		order by rand() limit 3
+	</select>
+	
+	<!-- 팔로워 목록 -->
+	<select id="followerList" parameterType="_int" resultType="userDTO">
+		select follower_number, u.user_id, u.user_name,u.user_number  from tbl_follow f, tbl_user u
+		where following_number = #{userNumber} and f.follower_number = u.user_number;
+	</select>
+	
+	<!-- 팔로잉 수 -->
+	<select id="followingCount" parameterType="_int" resultType="_int">
+		select count(following_number) from tbl_follow f, tbl_user u
+		where follower_number = #{userNumber} and f.following_number = u.user_number;
+	</select>
+	
+	<!-- 팔로워 수 -->
+	<select id="followerCount" parameterType="_int" resultType="_int">
+		select count(follower_number) from tbl_follow f, tbl_user u
+		where following_number = #{userNumber} and f.follower_number = u.user_number;
+	</select>
+	
+	<!-- 맞팔 여부 -->
+	<select id="f4f" parameterType="map" resultType="_int">
+		select count(following_number) from tbl_follow f, tbl_user u
+		where follower_number = #{userNumber} and f.following_number = u.user_number and following_number = #{followUser};
+	</select>
+
+	<!-- 언팔로우 -->
+	<delete id="deleteFollower" parameterType="map">
+		delete from tbl_follow
+		where follower_number= #{userNumber} AND following_number= #{followNumber}
+	</delete>
+	
+	<!-- 팔로잉  -->
+	<insert id="following" parameterType="map">
+		insert into tbl_follow
+		(follower_number, following_number)
+		values(#{userNumber} , #{followNumber})
+	</insert>
+
+	<select id="selectFollower" parameterType="_int" resultType="FollowVO">
+		select follower_number from tbl_follow where following_number=#{followingNumber}
+	</select>
+	
+	<select id="selectFollowing" parameterType="_int" resultType="FollowVO">
+		select following_number from tbl_follow where follower_number=#{followerNumber}
+	</select>
+	
+</mapper>

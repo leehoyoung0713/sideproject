@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Funeral">
+<!-- 전체 리스트 조회 -->
+<select id="selectAll" parameterType="map" resultType="funeralVO">
+		select funeral_number, funeral_name, funeral_phone, funeral_address, funeral_content, funeral_url
+		from tbl_funeral
+		order by funeral_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="selectOne" parameterType="string" resultType="funeralVO">
+		SELECT * FROM tbl_funeral WHERE funeral_name LIKE '%${funeralSearch}%' 
+	</select>
+	<select id="selectCount" resultType="_int">
+		select count(funeral_number) from tbl_funeral
+	</select>
+	
+	<select id="selectAlltwo" resultType="funeralVO">
+		select funeral_number, funeral_name, funeral_phone, funeral_address, funeral_content, funeral_url
+		from tbl_funeral
+		order by funeral_number desc
+	</select>
+</mapper>
